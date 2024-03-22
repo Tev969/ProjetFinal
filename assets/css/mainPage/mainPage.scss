@@ -1,39 +1,64 @@
 @import "../variableScss/variable.scss";
 
-*  {
+* {
     min-width: 0;
     font: inherit;
-    }
-    
-    *, *::before, *::after {
-         box-sizing: border-box;
-    }
-    
-    img, video , svg {
-         display: block;
-         height: auto;
-         max-width: 100%;
-    }
-    
-    body {
-         margin: 0;
-         min-height: 100dvh;
-    }
-    
-    h1, h2, h3, h4, h5, h6 {
-         text-wrap: balance;
-    }
-    
-    p {
-         text-wrap: pretty;
-    }
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+img,
+video,
+svg {
+    display: block;
+    height: auto;
+    max-width: 100%;
+}
+
+body {
+    margin: 0;
+    min-height: 100dvh;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-wrap: balance;
+}
+
+p {
+    text-wrap: pretty;
+}
+
+.button-model {
+    padding: 7px 20px 10px 20px;
+    height: 42px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+    font-family: $quickSandFont;
+    font-size: 1.3rem;
+    transition: background-color 0.4s ease;
+    box-shadow: 0px 2px 10px 1px rgba(0, 0, 0, 0.34) inset;
+    -webkit-box-shadow: 0px 2px 10px 1px rgba(0, 0, 0, 0.34) inset;
+    -moz-box-shadow: 0px 2px 10px 1px rgba(0, 0, 0, 0.34) inset;
+}
 
 body {
     background-color: $background-color;
     margin: 30px 40px 40px 40px;
 }
 
-// 
+// TODO    TITRE ET LOGO
 
 .top-main-page {
     display: flex;
@@ -42,31 +67,187 @@ body {
 
 .title-container {
     position: relative;
-display: flex;
-width: fit-content;
+    display: flex;
+    width: 220px;
+    height: 135px;
 
-    h1{
+    h1 {
         color: $orange;
         margin: 0;
-        font-size: 3em;
+        font-size: 3.5em;
         font-family: $quickSandFont;
-        width: 200px;
-        height: 115px;
     }
 
-   
-        img {
-            position: absolute;
-            right: 0;
-            bottom: 0;
-            transform: rotate(10deg); 
-            width: 60px;
-            height: 60px;
-            
-        }
-    
+    img {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        transform: rotate(10deg);
+        width: 60px;
+        height: 60px;
+    }
 }
 
+// TODO    FIN TITRE LOOGO
+
+// ---------------------------------------------------------------
+
+// ** BUTTON CONNECT ET SUBSC
+
+.login-signup {
+    padding-top: 25px;
+    display: flex;
+    gap: 23px;
+}
+
+.login {
+    @extend .button-model;
+    background-color: $green;
+}
+
+.signup {
+    @extend .button-model;
+    background-color: $orange;
+}
+
+.signup:hover {
+    background-color: $brown;
+}
+
+.login:hover {
+    background-color: $brown;
+}
+
+//  ** FIN BUTTON CONNECT ET SUBSC
+
+// TODO Debut barre recherche
+
+.search-recipe-container {
+    padding-top: 25px;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+
+    form {
+        display: flex;
+    }
+}
+
+.search-recipe {
+    background-color: $brown;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px 0px 0px 8px;
+    box-sizing: border-box;
+    border: none;
+    box-shadow: 0px 2px 10px 1px rgba(0, 0, 0, 0.34) inset;
+    -webkit-box-shadow: 0px 2px 10px 1px rgba(0, 0, 0, 0.34) inset;
+    -moz-box-shadow: 0px 2px 10px 1px rgba(0, 0, 0, 0.34) inset;
+}
+
+.search-recipe:focus {
+    outline: none;
+}
+
+.search-recipe::placeholder {
+    color: white;
+    font-family: $quickSandFont;
+}
+
+.find {
+    width: 155px;
+    background-color: $green;
+    color: white;
+    font-family: $quickSandFont;
+    border: none;
+    border-radius: 0px 8px 8px 0px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0px 2px 10px 1px rgba(0, 0, 0, 0.34) inset;
+    -webkit-box-shadow: 0px 2px 10px 1px rgba(0, 0, 0, 0.34) inset;
+    -moz-box-shadow: 0px 2px 10px 1px rgba(0, 0, 0, 0.34) inset;
+}
+
+.find:hover {
+    background-color: #45a049;
+}
+
+@media only screen and (max-width: 1130px) {
+    .title-container {
+        width: 180px;
+        height: 105px;
+        h1 {
+            font-size: 3em;
+        }
+        img {
+            width: 50px;
+            height: 50px;
+        }
+    }
+
+    .top-main-page {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .login-signup {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .search-recipe-container {
+        max-width: 80%;
+    }
+}
+
+/* Pour les écrans jusqu'à 480 pixels de largeur */
+@media only screen and (max-width: 480px) {
+    .title-container {
+        width: 150px;
+        height: 90px;
+        h1 {
+            font-size: 2.5em;
+        }
+        img {
+            width: 40px;
+            height: 40px;
+        }
+    }
+
+    .search-recipe-container {
+        max-width: 90%;
+    }
+}
+
+// TODO fin barre nav
+
+// ** Debut recettes global
+
+.recipes-container {
+
+    div {
+display: flex;
+justify-content: space-between;
+
+
+h2 {
+
+}
+    }
+}
+
+.h3-container {
+
+
+    h3 {
 
 
 
+        a {
+            
+        }
+    }
+}

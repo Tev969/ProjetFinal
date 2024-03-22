@@ -1,13 +1,18 @@
+@charset "UTF-8";
 * {
   min-width: 0;
   font: inherit;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
-img, video, svg {
+img,
+video,
+svg {
   display: block;
   height: auto;
   max-width: 100%;
@@ -18,12 +23,33 @@ body {
   min-height: 100dvh;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   text-wrap: balance;
 }
 
 p {
   text-wrap: pretty;
+}
+
+.button-model, .signup, .login {
+  padding: 7px 20px 10px 20px;
+  height: 42px;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+  font-family: "Quicksand";
+  font-size: 1.3rem;
+  transition: background-color 0.4s ease;
+  box-shadow: 0px 2px 10px 1px rgba(0, 0, 0, 0.34) inset;
+  -webkit-box-shadow: 0px 2px 10px 1px rgba(0, 0, 0, 0.34) inset;
+  -moz-box-shadow: 0px 2px 10px 1px rgba(0, 0, 0, 0.34) inset;
 }
 
 body {
@@ -39,16 +65,14 @@ body {
 .title-container {
   position: relative;
   display: flex;
-  width: -moz-fit-content;
-  width: fit-content;
+  width: 220px;
+  height: 135px;
 }
 .title-container h1 {
   color: #DA7B27;
   margin: 0;
-  font-size: 3em;
+  font-size: 3.5em;
   font-family: "Quicksand";
-  width: 200px;
-  height: 115px;
 }
 .title-container img {
   position: absolute;
@@ -57,4 +81,129 @@ body {
   transform: rotate(10deg);
   width: 60px;
   height: 60px;
+}
+
+.login-signup {
+  padding-top: 25px;
+  display: flex;
+  gap: 23px;
+}
+
+.login {
+  background-color: #63823F;
+}
+
+.signup {
+  background-color: #DA7B27;
+}
+
+.signup:hover {
+  background-color: #A87D55;
+}
+
+.login:hover {
+  background-color: #A87D55;
+}
+
+.search-recipe-container {
+  padding-top: 25px;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+.search-recipe-container form {
+  display: flex;
+}
+
+.search-recipe {
+  background-color: #A87D55;
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px 0px 0px 8px;
+  box-sizing: border-box;
+  border: none;
+  box-shadow: 0px 2px 10px 1px rgba(0, 0, 0, 0.34) inset;
+  -webkit-box-shadow: 0px 2px 10px 1px rgba(0, 0, 0, 0.34) inset;
+  -moz-box-shadow: 0px 2px 10px 1px rgba(0, 0, 0, 0.34) inset;
+}
+
+.search-recipe:focus {
+  outline: none;
+}
+
+.search-recipe::-moz-placeholder {
+  color: white;
+  font-family: "Quicksand";
+}
+
+.search-recipe::placeholder {
+  color: white;
+  font-family: "Quicksand";
+}
+
+.find {
+  width: 155px;
+  background-color: #63823F;
+  color: white;
+  font-family: "Quicksand";
+  border: none;
+  border-radius: 0px 8px 8px 0px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0px 2px 10px 1px rgba(0, 0, 0, 0.34) inset;
+  -webkit-box-shadow: 0px 2px 10px 1px rgba(0, 0, 0, 0.34) inset;
+  -moz-box-shadow: 0px 2px 10px 1px rgba(0, 0, 0, 0.34) inset;
+}
+
+.find:hover {
+  background-color: #45a049;
+}
+
+@media only screen and (max-width: 1130px) {
+  .title-container {
+    width: 180px;
+    height: 105px;
+  }
+  .title-container h1 {
+    font-size: 3em;
+  }
+  .title-container img {
+    width: 50px;
+    height: 50px;
+  }
+  .top-main-page {
+    flex-direction: column;
+    align-items: center;
+  }
+  .login-signup {
+    flex-direction: row;
+    align-items: center;
+  }
+  .search-recipe-container {
+    max-width: 80%;
+  }
+}
+/* Pour les écrans jusqu'à 480 pixels de largeur */
+@media only screen and (max-width: 480px) {
+  .title-container {
+    width: 150px;
+    height: 90px;
+  }
+  .title-container h1 {
+    font-size: 2.5em;
+  }
+  .title-container img {
+    width: 40px;
+    height: 40px;
+  }
+  .search-recipe-container {
+    max-width: 90%;
+  }
+}
+.recipes-container div {
+  display: flex;
+  justify-content: space-between;
 }/*# sourceMappingURL=mainPage.css.map */
