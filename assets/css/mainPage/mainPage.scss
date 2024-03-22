@@ -1,5 +1,11 @@
 @import "../variableScss/variable.scss";
 
+
+
+
+
+
+
 * {
     min-width: 0;
     font: inherit;
@@ -226,28 +232,45 @@ body {
 
 // ** Debut recettes global
 
+
 .recipes-container {
+    margin-top: 55px;
+    display: flex;
+    justify-content: space-between;
+    background-color: $orange;
+    padding: 1px 55px 1px 55px;
+}
 
-    div {
+.h2-container {
 display: flex;
-justify-content: space-between;
-
 
 h2 {
-
+    font-size: 2rem;
+    font-family: $quickSandFont;
+    color: $background-color;
 }
-    }
-}
+} 
 
 .h3-container {
-
+    display: flex;
 
     h3 {
+        font-size: 1.5rem;
+        font-family: $quickSandFont;
+        color: $background-color;
+    }
 
-
-
-        a {
-            
-        }
+    a {
+        display: inline-block;
+        width: 50px; /* Largeur du bouton */
+        height: 50px; /* Hauteur du bouton */
+        background-color: #007bff; /* Couleur de fond */
+        color: #ffffff; /* Couleur du texte */
+        border-radius: 50%; /* Rend le bouton en forme de cercle */
+        text-align: center;
+        line-height: 50px; /* Centrer le texte verticalement */
+        font-size: 20px; /* Taille de la police */
+        text-decoration: none; /* Supprime les soulignements */
     }
 }
+

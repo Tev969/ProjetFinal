@@ -32,5 +32,13 @@
 		<a class="show-more-button" href="/allRecipes">-></a>
 	</div>
 
+	<ul class="images-container-recipes">
+		{% for i in 0..4 %}
+			<li><img src="{{recipes[i].image }}" alt="">
+				<h3>{{recipes[i].recipeTitle }}</h3>
+			</li>
+		{% endfor %}
+	</ul>
+
 
 </section>

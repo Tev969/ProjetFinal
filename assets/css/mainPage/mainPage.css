@@ -203,7 +203,40 @@ body {
     max-width: 90%;
   }
 }
-.recipes-container div {
+.recipes-container {
+  margin-top: 55px;
   display: flex;
   justify-content: space-between;
+  background-color: #DA7B27;
+  padding: 1px 55px 1px 55px;
+}
+
+.h2-container {
+  display: flex;
+}
+.h2-container h2 {
+  font-size: 2rem;
+  font-family: "Quicksand";
+  color: #FFE7C1;
+}
+
+.h3-container {
+  display: flex;
+}
+.h3-container h3 {
+  font-size: 1.5rem;
+  font-family: "Quicksand";
+  color: #FFE7C1;
+}
+.h3-container a {
+  display: inline-block;
+  width: 50px; /* Largeur du bouton */
+  height: 50px; /* Hauteur du bouton */
+  background-color: #007bff; /* Couleur de fond */
+  color: #ffffff; /* Couleur du texte */
+  border-radius: 50%; /* Rend le bouton en forme de cercle */
+  text-align: center;
+  line-height: 50px; /* Centrer le texte verticalement */
+  font-size: 20px; /* Taille de la police */
+  text-decoration: none; /* Supprime les soulignements */
 }/*# sourceMappingURL=mainPage.css.map */

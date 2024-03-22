@@ -29,4 +29,10 @@ app.listen(parseInt(process.env.PORT), (err) => {
     }
   });
   
-  mongoose.connect(process.env.URLBDD);
+  
+  try {
+    mongoose.connect(process.env.URLBDD);
+    console.log("connecter a la bdd");
+  } catch (error) {
+    console.log(error);
+  }
