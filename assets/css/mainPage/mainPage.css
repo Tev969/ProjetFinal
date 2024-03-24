@@ -162,6 +162,60 @@ body {
   background-color: #45a049;
 }
 
+.recipes-container {
+  margin-top: 55px;
+  display: flex;
+  border-radius: 25px;
+  background-color: #DA7B27;
+  padding: 1px 55px 1px 55px;
+  flex-direction: column;
+}
+
+.h2-container {
+  display: grid;
+  grid-template-columns: 1fr min-content min-content;
+  gap: 1rem;
+  place-items: center start;
+}
+.h2-container h2 {
+  align-items: start;
+  font-size: 2rem;
+  font-family: "Quicksand";
+  color: #FFE7C1;
+}
+.h2-container h3 {
+  font-size: 1.5rem;
+  font-family: "Quicksand";
+  color: #FFE7C1;
+  text-wrap: nowrap;
+}
+.h2-container a {
+  display: inline-block;
+  width: 50px; /* Largeur du bouton */
+  height: 50px; /* Hauteur du bouton */
+  background-color: #007bff; /* Couleur de fond */
+  color: #ffffff; /* Couleur du texte */
+  border-radius: 50%; /* Rend le bouton en forme de cercle */
+  text-align: center;
+  line-height: 50px; /* Centrer le texte verticalement */
+  font-size: 20px; /* Taille de la police */
+  text-decoration: none; /* Supprime les soulignements */
+}
+
+.images-container-recipes {
+  display: flex;
+  padding: 0;
+  gap: 1rem;
+  flex-wrap: wrap; /* Permet le retour à la ligne des éléments flexibles */
+}
+
+.images-container-recipes li {
+  list-style-type: none;
+  font-family: "Quicksand";
+  flex-basis: calc(20% - 1rem); /* Ajuste la largeur de chaque élément à 20% moins un espace */
+  max-width: calc(20% - 1rem); /* Ajuste également la largeur maximale */
+}
+
 @media only screen and (max-width: 1130px) {
   .title-container {
     width: 180px;
@@ -203,40 +257,9 @@ body {
     max-width: 90%;
   }
 }
-.recipes-container {
-  margin-top: 55px;
-  display: flex;
-  justify-content: space-between;
-  background-color: #DA7B27;
-  padding: 1px 55px 1px 55px;
-}
-
-.h2-container {
-  display: flex;
-}
-.h2-container h2 {
-  font-size: 2rem;
-  font-family: "Quicksand";
-  color: #FFE7C1;
-}
-
-.h3-container {
-  display: flex;
-}
-.h3-container h3 {
-  font-size: 1.5rem;
-  font-family: "Quicksand";
-  color: #FFE7C1;
-}
-.h3-container a {
-  display: inline-block;
-  width: 50px; /* Largeur du bouton */
-  height: 50px; /* Hauteur du bouton */
-  background-color: #007bff; /* Couleur de fond */
-  color: #ffffff; /* Couleur du texte */
-  border-radius: 50%; /* Rend le bouton en forme de cercle */
-  text-align: center;
-  line-height: 50px; /* Centrer le texte verticalement */
-  font-size: 20px; /* Taille de la police */
-  text-decoration: none; /* Supprime les soulignements */
+@media screen and (max-width: 1130px) {
+  .images-container-recipes li {
+    flex-basis: calc(30% - 1rem); /* Pour les écrans très petits, ajustez la largeur à 50% moins un espace */
+    max-width: calc(30% - 1rem);
+  }
 }/*# sourceMappingURL=mainPage.css.map */

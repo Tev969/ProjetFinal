@@ -22,20 +22,15 @@
 
 <section class="recipes-container">
 
-
 	<div class="h2-container">
 		<h2 class="recipes">Nos recettes</h2>
-	</div>
-
-	<div class="h3-container">
 		<h3 class="show-more-text">Voir plus</h3>
 		<a class="show-more-button" href="/allRecipes">-></a>
 	</div>
-
 	<ul class="images-container-recipes">
-		{% for i in 0..4 %}
-			<li><img src="{{recipes[i].image }}" alt="">
-				<h3>{{recipes[i].recipeTitle }}</h3>
+		{% for recipe in recipes %}
+			<li><a href="/recipeDetail/{{recipe.id }}"><img src="{{recipe.image. }}" alt="recipes"></a>
+				<h3>{{recipe.recipeTitle }}</h3>
 			</li>
 		{% endfor %}
 	</ul>

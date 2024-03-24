@@ -1,11 +1,5 @@
 @import "../variableScss/variable.scss";
 
-
-
-
-
-
-
 * {
     min-width: 0;
     font: inherit;
@@ -181,6 +175,80 @@ body {
     background-color: #45a049;
 }
 
+// TODO fin barre nav
+
+// ** Debut recettes global
+
+.recipes-container {
+    margin-top: 55px;
+    display: flex;
+   border-radius: 25px;
+    background-color: $orange;
+    padding: 1px 55px 1px 55px;
+    flex-direction: column;
+}
+
+.h2-container {
+    display: grid;
+    grid-template-columns: 1fr min-content min-content;
+    gap: 1rem;
+    place-items: center start;
+    
+
+    h2 {
+        align-items: start;
+        font-size: 2rem;
+        font-family: $quickSandFont;
+        color: $background-color;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+        font-family: $quickSandFont;
+        color: $background-color;
+        text-wrap: nowrap;
+    }
+
+    a {
+        display: inline-block;
+        width: 50px; /* Largeur du bouton */
+        height: 50px; /* Hauteur du bouton */
+        background-color: #007bff; /* Couleur de fond */
+        color: #ffffff; /* Couleur du texte */
+        border-radius: 50%; /* Rend le bouton en forme de cercle */
+        text-align: center;
+        line-height: 50px; /* Centrer le texte verticalement */
+        font-size: 20px; /* Taille de la police */
+        text-decoration: none; /* Supprime les soulignements */
+    }
+}
+
+
+
+.images-container-recipes {
+    display: flex;
+    padding: 0;
+    gap: 1rem;
+    flex-wrap: wrap; /* Permet le retour à la ligne des éléments flexibles */
+}
+
+.images-container-recipes li {
+    list-style-type: none;
+    font-family: $quickSandFont;
+    flex-basis: calc(20% - 1rem); /* Ajuste la largeur de chaque élément à 20% moins un espace */
+    max-width: calc(20% - 1rem); /* Ajuste également la largeur maximale */
+}
+
+
+
+
+
+
+
+
+
+
+
 @media only screen and (max-width: 1130px) {
     .title-container {
         width: 180px;
@@ -228,49 +296,11 @@ body {
     }
 }
 
-// TODO fin barre nav
 
-// ** Debut recettes global
-
-
-.recipes-container {
-    margin-top: 55px;
-    display: flex;
-    justify-content: space-between;
-    background-color: $orange;
-    padding: 1px 55px 1px 55px;
+@media screen and (max-width: 1130px) {
+    .images-container-recipes li {
+        flex-basis: calc(30% - 1rem); /* Pour les écrans très petits, ajustez la largeur à 50% moins un espace */
+        max-width: calc(30% - 1rem);
 }
-
-.h2-container {
-display: flex;
-
-h2 {
-    font-size: 2rem;
-    font-family: $quickSandFont;
-    color: $background-color;
 }
-} 
-
-.h3-container {
-    display: flex;
-
-    h3 {
-        font-size: 1.5rem;
-        font-family: $quickSandFont;
-        color: $background-color;
-    }
-
-    a {
-        display: inline-block;
-        width: 50px; /* Largeur du bouton */
-        height: 50px; /* Hauteur du bouton */
-        background-color: #007bff; /* Couleur de fond */
-        color: #ffffff; /* Couleur du texte */
-        border-radius: 50%; /* Rend le bouton en forme de cercle */
-        text-align: center;
-        line-height: 50px; /* Centrer le texte verticalement */
-        font-size: 20px; /* Taille de la police */
-        text-decoration: none; /* Supprime les soulignements */
-    }
-}
-
+    
