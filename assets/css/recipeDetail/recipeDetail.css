@@ -40,10 +40,20 @@ body {
   height: 666px;
 }
 
+.ingredient-details {
+  padding-top: 35px;
+  display: flex;
+  flex: 1;
+}
 .ingredient-details img {
   width: 300px; /* Définit la largeur */
   height: 300px; /* Définit la hauteur */
   -o-object-fit: cover;
      object-fit: cover; /* Pour conserver les proportions de l'image */
   border-radius: 20px;
+}
+
+.duration-people {
+  display: flex;
+  flex: 1;
 }/*# sourceMappingURL=recipeDetail.css.map */

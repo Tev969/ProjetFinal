@@ -1,21 +1,21 @@
 <section class="recipe-detail-container">
 	<div class="top-container">
-		<ul class="">
-			{% for recipe in recipes %}
-				{# <li><a href="/recipeDetail/{{recipe.id }}"><img src="{{recipe.image }}" alt="recipes"></a>
-					<h3>{{recipe.recipeTitle }}</h3> #}
-				{# </li> #}
-          <h1>{{recipe.recipeTitle }}</h1>
-        	{% endfor %}
-		</ul>
-	</div>
 
-    <div class="ingredient-details">
-    {% for recipe in recipes %}
-<img src="{{recipe.image }}" alt="">
-    {% endfor %}
+		<h1>
+			{{recipes.recipeTitle}}
+		</h1>
+
+</div>
+
+
+<div class="ingredient-details">
+	<img src="{{recipes.image}}" alt="">
+	
+</div>
+<div class="duration-people">
+    <p>{{recipes.duration }}</p>
+    <p>{{recipes.difficulty }}</p>
+    <p>{{recipes.numberOfPeoples}}</p>
     </div>
-
-
 
 </section>

@@ -122,6 +122,12 @@ ul {
   border-radius: 20px;
   transition: transform 0.4s ease;
 }
+.images-container-recipes li h3 {
+  font-size: 1.5rem;
+  font-family: "Quicksand";
+  color: #FFE7C1;
+  text-wrap: nowrap;
+}
 
 .images-container-recipes li img:hover {
   transform: scale(1.1);

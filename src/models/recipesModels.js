@@ -56,13 +56,13 @@ const recipesSchema = new mongoose.Schema({
         },
   },
   
-  instruction: {
-      type: [{}],
-  },
+//   instruction: {
+//       type: [{}],
+//   },
 
-  ingredients: {
-      type: [{}],
-  },
+//   ingredients: {
+//       type: [{}],
+//   },
 });
 
 const recipesModel = mongoose.model("recipes", recipesSchema);

@@ -45,9 +45,9 @@ body {
 }
 
 .ingredient-details {
-
-
-
+    padding-top: 35px;
+   display: flex;
+  flex: 1;
 
     img {
         width: 300px; /* Définit la largeur */
@@ -55,4 +55,9 @@ body {
         object-fit: cover; /* Pour conserver les proportions de l'image */
         border-radius: 20px;
     }
+}
+
+.duration-people {
+    display: flex;
+    flex: 1;
 }
