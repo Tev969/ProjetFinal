@@ -6,7 +6,7 @@ recipeDetailsRouter.get("/recipeDetail/:recipeid", async (req, res) => {
     try {
         const recipes = await recipesModel.findById(req.params.recipeid)
         console.log(recipes);
-      res.render("recipeDetails/index.html.twig", {
+      res.render("recipeDetail/index.html.twig", {
         recipes,
       });
     } catch (error) {
@@ -14,5 +14,6 @@ recipeDetailsRouter.get("/recipeDetail/:recipeid", async (req, res) => {
     }
   });
   
-  module.exports = 
-  recipeDetailsRouter;
+  module.exports = recipeDetailsRouter;
+
+

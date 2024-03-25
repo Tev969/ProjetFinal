@@ -14,6 +14,10 @@ body {
     height: 100%;
 }
 
+#home {
+    background: url(assets/images/accueil.svg);
+}
+
 .top-container {
     display: flex;
     justify-content: space-between;
@@ -104,13 +108,26 @@ ul {
     justify-content: center;
     flex-direction: row;
     flex-wrap: wrap;
+    gap: 2.2rem;
 
 
     li {
         list-style-type: none;
         font-family: $quickSandFont;
 
-
+   img {
+    width: 300px; /* Définit la largeur */
+height: 300px; /* Définit la hauteur */
+object-fit: cover; /* Pour conserver les proportions de l'image */
+border-radius: 20px;
+transition: transform 0.4s ease;
+   }
 
 }
 }
+
+
+.images-container-recipes li img:hover {
+    transform: scale(1.1);
+}
+

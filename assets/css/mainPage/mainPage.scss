@@ -186,6 +186,9 @@ body {
     background-color: $orange;
     padding: 1px 55px 1px 55px;
     flex-direction: column;
+    box-shadow: 0px 2px 10px 1px rgba(0, 0, 0, 0.34) inset;
+    -webkit-box-shadow: 0px 2px 10px 1px rgba(0, 0, 0, 0.34) inset;
+    -moz-box-shadow: 0px 2px 10px 1px rgba(0, 0, 0, 0.34) inset;
 }
 
 .h2-container {
@@ -230,17 +233,37 @@ body {
     padding: 0;
     gap: 1rem;
     flex-wrap: wrap; /* Permet le retour à la ligne des éléments flexibles */
+
+
+
+    li {
+        list-style-type: none;
+        font-family: $quickSandFont;
+        flex-basis: calc(20% - 1rem); /* Ajuste la largeur de chaque élément à 20% moins un espace */
+        max-width: calc(20% - 1rem); /* Ajuste également la largeur maximale */
+    }
+
+    img {
+        width: 300px; /* Définit la largeur */
+        height: 300px; /* Définit la hauteur */
+        object-fit: cover; /* Pour conserver les proportions de l'image */
+        border-radius: 20px;
+        transition: transform 0.4s ease;
+
+     
+    }
+
+
+    h3 {
+        font-size: 1.3rem;
+        font-family: $quickSandFont;
+        color: $background-color;
+    }
 }
 
-.images-container-recipes li {
-    list-style-type: none;
-    font-family: $quickSandFont;
-    flex-basis: calc(20% - 1rem); /* Ajuste la largeur de chaque élément à 20% moins un espace */
-    max-width: calc(20% - 1rem); /* Ajuste également la largeur maximale */
+.images-container-recipes li img:hover {
+    transform: scale(1.1);
 }
-
-
-
 
 
 
@@ -304,3 +327,15 @@ body {
 }
 }
     
+
+@media screen and (max-width: 768px) {
+    .images-container-recipes {
+        flex-direction: column; /* Affichage des images en colonnes sur les écrans plus petits */
+        gap: 20px; /* Espacement entre les images */
+    }
+
+    .images-container-recipes li {
+        flex-basis: 100%; /* Chaque élément occupe la pleine largeur de son conteneur */
+        max-width: 100%; /* Ajuste également la largeur maximale */
+    }
+}

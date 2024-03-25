@@ -169,6 +169,9 @@ body {
   background-color: #DA7B27;
   padding: 1px 55px 1px 55px;
   flex-direction: column;
+  box-shadow: 0px 2px 10px 1px rgba(0, 0, 0, 0.34) inset;
+  -webkit-box-shadow: 0px 2px 10px 1px rgba(0, 0, 0, 0.34) inset;
+  -moz-box-shadow: 0px 2px 10px 1px rgba(0, 0, 0, 0.34) inset;
 }
 
 .h2-container {
@@ -208,12 +211,28 @@ body {
   gap: 1rem;
   flex-wrap: wrap; /* Permet le retour à la ligne des éléments flexibles */
 }
-
 .images-container-recipes li {
   list-style-type: none;
   font-family: "Quicksand";
   flex-basis: calc(20% - 1rem); /* Ajuste la largeur de chaque élément à 20% moins un espace */
   max-width: calc(20% - 1rem); /* Ajuste également la largeur maximale */
+}
+.images-container-recipes img {
+  width: 300px; /* Définit la largeur */
+  height: 300px; /* Définit la hauteur */
+  -o-object-fit: cover;
+     object-fit: cover; /* Pour conserver les proportions de l'image */
+  border-radius: 20px;
+  transition: transform 0.4s ease;
+}
+.images-container-recipes h3 {
+  font-size: 1.3rem;
+  font-family: "Quicksand";
+  color: #FFE7C1;
+}
+
+.images-container-recipes li img:hover {
+  transform: scale(1.1);
 }
 
 @media only screen and (max-width: 1130px) {
@@ -261,5 +280,15 @@ body {
   .images-container-recipes li {
     flex-basis: calc(30% - 1rem); /* Pour les écrans très petits, ajustez la largeur à 50% moins un espace */
     max-width: calc(30% - 1rem);
+  }
+}
+@media screen and (max-width: 768px) {
+  .images-container-recipes {
+    flex-direction: column; /* Affichage des images en colonnes sur les écrans plus petits */
+    gap: 20px; /* Espacement entre les images */
+  }
+  .images-container-recipes li {
+    flex-basis: 100%; /* Chaque élément occupe la pleine largeur de son conteneur */
+    max-width: 100%; /* Ajuste également la largeur maximale */
   }
 }/*# sourceMappingURL=mainPage.css.map */
