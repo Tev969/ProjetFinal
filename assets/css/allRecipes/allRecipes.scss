@@ -73,6 +73,9 @@ body {
     width: 95vw;
     display: flex;
     flex-direction: column;
+    box-shadow: 0px 2px 10px 1px rgba(0, 0, 0, 0.34) inset;
+    -webkit-box-shadow: 0px 2px 10px 1px rgba(0, 0, 0, 0.34) inset;
+    -moz-box-shadow: 0px 2px 10px 1px rgba(0, 0, 0, 0.34) inset;
 
     
 
@@ -96,7 +99,7 @@ body {
 }
 
 .search-recipe {
-    background-color: $second-color;
+    background-color: $three-color;
     width: 100%;
     padding: 15px;
     font-size: 16px;
@@ -107,10 +110,12 @@ body {
     box-shadow: 0px 2px 10px 1px rgba(0, 0, 0, 0.34) inset;
     -webkit-box-shadow: 0px 2px 10px 1px rgba(0, 0, 0, 0.34) inset;
     -moz-box-shadow: 0px 2px 10px 1px rgba(0, 0, 0, 0.34) inset;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Ajout de transition pour background-color et transform */
 }
 
 .search-recipe:focus {
     outline: none;
+    transform: scale(1.05); /* Effet de mise à l'échelle lorsqu'en focus */
 }
 
 .search-recipe::placeholder {
@@ -120,7 +125,7 @@ body {
 
 .find {
     width: 155px;
-    background-color: $three-color;
+    background-color: $second-color;
     color: white;
     font-family: $quickSandFont;
     border: none;
@@ -162,6 +167,7 @@ height: 300px; /* Définit la hauteur */
 object-fit: cover; /* Pour conserver les proportions de l'image */
 border-radius: 20px;
 transition: transform 0.4s ease;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
    }
    h3 {
     font-size: 1.5rem;
@@ -177,5 +183,6 @@ transition: transform 0.4s ease;
 
 .images-container-recipes li img:hover {
     transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 

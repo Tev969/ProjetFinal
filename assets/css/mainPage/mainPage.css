@@ -69,7 +69,7 @@ body {
   height: 135px;
 }
 .title-container h1 {
-  color: #DA7B27;
+  color: #e1822d;
   margin: 0;
   font-size: 3.5em;
   font-family: "Quicksand";
@@ -90,11 +90,11 @@ body {
 }
 
 .login {
-  background-color: #63823F;
+  background-color: #047D5A;
 }
 
 .signup {
-  background-color: #DA7B27;
+  background-color: #e1822d;
 }
 
 .signup:hover {
@@ -145,7 +145,7 @@ body {
 
 .find {
   width: 155px;
-  background-color: #63823F;
+  background-color: #047D5A;
   color: white;
   font-family: "Quicksand";
   border: none;
@@ -166,7 +166,7 @@ body {
   margin-top: 55px;
   display: flex;
   border-radius: 25px;
-  background-color: #DA7B27;
+  background-color: #e1822d;
   padding: 1px 55px 1px 55px;
   flex-direction: column;
   box-shadow: 0px 2px 10px 1px rgba(0, 0, 0, 0.34) inset;
@@ -224,6 +224,7 @@ body {
      object-fit: cover; /* Pour conserver les proportions de l'image */
   border-radius: 20px;
   transition: transform 0.4s ease;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 .images-container-recipes h3 {
   font-size: 1.3rem;
@@ -233,6 +234,7 @@ body {
 
 .images-container-recipes li img:hover {
   transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
 @media only screen and (max-width: 1130px) {

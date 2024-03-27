@@ -63,11 +63,14 @@ body {
 
 .all-recipes-container {
   margin: 50px 0px 50px 0px;
-  background-color: #DA7B27;
+  background-color: #e1822d;
   border-radius: 20px;
   width: 95vw;
   display: flex;
   flex-direction: column;
+  box-shadow: 0px 2px 10px 1px rgba(0, 0, 0, 0.34) inset;
+  -webkit-box-shadow: 0px 2px 10px 1px rgba(0, 0, 0, 0.34) inset;
+  -moz-box-shadow: 0px 2px 10px 1px rgba(0, 0, 0, 0.34) inset;
 }
 .all-recipes-container h1 {
   font-family: "Quicksand";
@@ -87,7 +90,7 @@ body {
 }
 
 .search-recipe {
-  background-color: #63823F;
+  background-color: #A87D55;
   width: 100%;
   padding: 15px;
   font-size: 16px;
@@ -98,10 +101,12 @@ body {
   box-shadow: 0px 2px 10px 1px rgba(0, 0, 0, 0.34) inset;
   -webkit-box-shadow: 0px 2px 10px 1px rgba(0, 0, 0, 0.34) inset;
   -moz-box-shadow: 0px 2px 10px 1px rgba(0, 0, 0, 0.34) inset;
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Ajout de transition pour background-color et transform */
 }
 
 .search-recipe:focus {
   outline: none;
+  transform: scale(1.05); /* Effet de mise à l'échelle lorsqu'en focus */
 }
 
 .search-recipe::-moz-placeholder {
@@ -116,7 +121,7 @@ body {
 
 .find {
   width: 155px;
-  background-color: #A87D55;
+  background-color: #047D5A;
   color: white;
   font-family: "Quicksand";
   border: none;
@@ -158,6 +163,7 @@ ul {
      object-fit: cover; /* Pour conserver les proportions de l'image */
   border-radius: 20px;
   transition: transform 0.4s ease;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 .images-container-recipes li h3 {
   font-size: 1.5rem;
@@ -168,4 +174,5 @@ ul {
 
 .images-container-recipes li img:hover {
   transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }/*# sourceMappingURL=allRecipes.css.map */

@@ -249,6 +249,7 @@ body {
         object-fit: cover; /* Pour conserver les proportions de l'image */
         border-radius: 20px;
         transition: transform 0.4s ease;
+         box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 
      
     }
@@ -263,6 +264,7 @@ body {
 
 .images-container-recipes li img:hover {
     transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
 
