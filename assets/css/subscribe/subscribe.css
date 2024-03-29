@@ -52,16 +52,15 @@ form {
   background-color: rgba(58, 57, 57, 0.36);
   color: #FFE7C1;
   font-size: 1rem;
-  transition: background-color 0.3s ease;
-  transition: transform 0.3s ease, padding 0.3s ease;
+  transition: background-color 0.4s ease, transform 0.4s ease, margin 0.4s ease; /* Transition pour background-color, transform et margin */
 }
 
 .inputGroup input:hover,
 .inputGroup input:focus {
   background-color: rgba(58, 57, 57, 0.5);
-  padding: 1.2rem 2.2rem;
+  margin: 0px -1.6rem 0px -1.6rem;
   transform: scale(1.05);
-  transition: transform 0.3s ease, padding 0.3s ease;
+  transition: transform 0.4s ease, margin 0.4s ease, background-color 0.4s ease;
 }
 
 input::-moz-placeholder {
