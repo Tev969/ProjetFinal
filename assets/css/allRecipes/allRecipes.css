@@ -164,6 +164,7 @@ ul {
   border-radius: 20px;
   transition: transform 0.4s ease;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  border: 1px solid #FFE7C1;
 }
 .images-container-recipes li h3 {
   font-size: 1.5rem;

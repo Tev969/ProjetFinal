@@ -51,6 +51,11 @@ body {
   -o-object-fit: cover;
      object-fit: cover; /* Pour conserver les proportions de l'image */
   border-radius: 20px;
+  border: 1px solid #FFE7C1;
+  transition: background-color 0.3s ease;
+  box-shadow: 0px 2px 10px 1px rgba(0, 0, 0, 0.34) inset;
+  -webkit-box-shadow: 0px 2px 10px 1px rgba(0, 0, 0, 0.34) inset;
+  -moz-box-shadow: 0px 2px 10px 1px rgba(0, 0, 0, 0.34) inset;
 }
 
 .duration-people {
