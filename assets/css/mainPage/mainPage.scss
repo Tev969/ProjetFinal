@@ -48,10 +48,11 @@ p {
     font-family: $quickSandFont;
     font-size: 1.3rem;
     transition: background-color 0.4s ease;
-    box-shadow: 0px 2px 10px 1px rgba(0, 0, 0, 0.34) inset;
-    -webkit-box-shadow: 0px 2px 10px 1px rgba(0, 0, 0, 0.34) inset;
-    -moz-box-shadow: 0px 2px 10px 1px rgba(0, 0, 0, 0.34) inset;
+    box-shadow: 0px 2px 10px 1px rgba(0, 0, 0, 0.34); /* Ombre à l'extérieur */
+    -webkit-box-shadow: 0px 2px 10px 1px rgba(0, 0, 0, 0.34); /* Pour les navigateurs Webkit */
+    -moz-box-shadow: 0px 2px 10px 1px rgba(0, 0, 0, 0.34); /* Pour les navigateurs Firefox */
 }
+
 
 body {
     background-color: $background-color;
@@ -142,10 +143,12 @@ body {
     border: 1px solid #ccc;
     border-radius: 8px 0px 0px 8px;
     box-sizing: border-box;
+    color: whitesmoke;
+    font-family: $quickSandFont;
     border: none;
-    box-shadow: 0px 2px 10px 1px rgba(0, 0, 0, 0.34) inset;
-    -webkit-box-shadow: 0px 2px 10px 1px rgba(0, 0, 0, 0.34) inset;
-    -moz-box-shadow: 0px 2px 10px 1px rgba(0, 0, 0, 0.34) inset;
+    box-shadow: 0px 2px 10px 1px rgba(0, 0, 0, 0.34); /* Ombre à l'extérieur */
+    -webkit-box-shadow: 0px 2px 10px 1px rgba(0, 0, 0, 0.34); /* Pour les navigateurs Webkit */
+    -moz-box-shadow: 0px 2px 10px 1px rgba(0, 0, 0, 0.34); /* Pour les navigateurs Firefox */
 }
 
 .search-recipe:focus {
@@ -167,9 +170,12 @@ body {
     padding: 10px 20px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    box-shadow: 0px 2px 10px 1px rgba(0, 0, 0, 0.34) inset;
-    -webkit-box-shadow: 0px 2px 10px 1px rgba(0, 0, 0, 0.34) inset;
-    -moz-box-shadow: 0px 2px 10px 1px rgba(0, 0, 0, 0.34) inset;
+  box-shadow: 0px 2px 10px 1px rgba(0, 0, 0, 0.34); /* Ombre à l'extérieur */
+    -webkit-box-shadow: 0px 2px 10px 1px rgba(0, 0, 0, 0.34); /* Pour les navigateurs Webkit */
+    -moz-box-shadow: 0px 2px 10px 1px rgba(0, 0, 0, 0.34); /* Pour les navigateurs Firefox */
+
+
+   
 }
 
 .find:hover {

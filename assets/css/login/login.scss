@@ -1,1 +1,148 @@
 @import "../variableScss/variable.scss";
+
+
+body {
+    background-color: $background-color;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+.main-container {
+    border-radius: 25px ;
+    display: flex;
+    margin: 3rem 5rem 3rem 5rem;
+    height: 90vh;
+    border: 2px solid $main-color;
+    background-color: $second-color;
+}
+
+.image {
+    border-radius: 25px 0px 0px 25px;
+    width: fit-content;
+}
+
+.registrationForm {
+    border-radius: 25px;
+    padding: 2rem 3rem;
+    text-align: center;
+ background-color: $second-color; 
+ 
+ 
+ h1 {
+    font-size: 3rem;
+    color: $background-color;
+    font-family: $quickSandFont;
+ }
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 55px;
+}
+
+.inputGroup {
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+
+
+input {
+    outline: none;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    background-color: rgba(58, 57, 57, 0.36); 
+    color: $background-color;
+    font-size: 1rem;
+
+  
+    
+}
+}
+
+.inputGroup input:hover,
+.inputGroup input:focus {
+    background-color: rgba(58, 57, 57, 0.5);
+ 
+
+
+}
+
+
+
+input::placeholder {
+    color: $background-color;
+    font-family: $quickSandFont;
+    font-size: 1rem;
+}
+
+.submitGroup {
+
+    button {
+        cursor: pointer;
+        outline: none;
+        border: none;
+        padding: 1rem 2rem;
+        border-radius: 10px;
+        background-color: $main-color; 
+        color: $background-color;
+        font-size: 1rem;
+        transition: transform 0.4s ease;
+
+}
+
+
+}
+
+button:hover {
+    background-color: $main-color;
+    transform: scale(1.1);
+    
+}
+
+.redirect {
+
+    a{
+        text-decoration: underline;
+        color: $background-color;
+        font-family: $quickSandFont;
+        padding-bottom: 25px;
+
+       
+    }
+
+    
+
+}
+
+.redirect a:hover {
+    padding: 1.2rem 2.2rem;
+    transform: scale(1.05); /* Zoom de 5% */
+    transition: transform 0.4s ease;
+    color: $main-color;
+}
+
+
+.error {
+    color: red; /* couleur du texte en rouge */
+    font-size: 14px; /* taille de la police */
+    font-style: italic; /* style de police italique */
+    margin-top: 5px; /* espace en haut du paragraphe */
+}
+
+
+.return {
+display: flex;
+justify-content: center;
+    img {
+  width: 8%;
+  height: 8%;
+    }
+}

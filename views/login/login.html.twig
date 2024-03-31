@@ -1,0 +1,44 @@
+<section class="main-container">
+
+		<img  login="lazy" class="image" src="/images/framboisier.webp" alt="">
+
+
+	<section class="registrationForm">
+		<form action="/login" method="post">
+			<h1 class="subscribe">Se connecter</h1>
+
+			
+
+			<div class="inputGroup">
+		
+				<input id="email" name="email" placeholder="Votre mail." type="mail" required>
+				{% if error %}
+					<p class="error">{{error.errors.email.message}}</p>
+				{% endif %}
+			</div>
+
+			<div class="inputGroup">
+				
+				<input id="password"  name="password" placeholder="Mot de passe." type="password" required>
+				{% if error %}
+					<p class="error">{{error.errors.password.message}}</p>
+				{% endif %}
+			</div>
+
+			<div class="submitGroup">
+				<button>Envoyer</button>
+			</div>
+
+            <div class="redirect">
+            <a href="/subscribe">S'inscire ici </a>
+           
+            </div>
+
+                   <a class="return"  href="/MainPage"><img src="/images/back.png" alt=""></a>
+
+
+      
+		</form>
+	</section>
+
+</section>
