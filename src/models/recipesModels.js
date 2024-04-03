@@ -55,14 +55,17 @@ const recipesSchema = new mongoose.Schema({
           message: "Entrer un nombre valide",
         },
   },
-  
+
+
 //   instruction: {
-//       type: [{}],
+//       type: [],
 //   },
 
+
 //   ingredients: {
-//       type: [{}],
+//       type: [{name:String , quantity:Number, }],
 //   },
+
 });
 
 const recipesModel = mongoose.model("recipes", recipesSchema);

@@ -14,20 +14,16 @@
 	</div>
 
 	<div class="login-signup">
-		{% if user.id %}
+		{% if user %}
+			<a class="addRecipe" href="/addRecipe">Mes recettes</a>
+			<a class="logout" href="/logout">Déconnexion</a>
 
+		{% else %}
 
-			<a class="login" href="/login">ocucococ</a>
-			<a class="signup" href="/subscribe">S'CCCCc</a>
+			<a class="login" href="/login">Connexion</a>
+			<a class="signup" href="/subscribe">S'inscrire</a>
 
-
-		
-       {% else %}
-        
-		<a class="login" href="/login">Connexion</a>
-		<a class="signup" href="/subscribe">S'inscrire</a>
-        
-        {% endif %}
+		{% endif %}
 	</div>
 
 </section>
@@ -42,8 +38,13 @@
 	<ul class="images-container-recipes">
 		{% for recipe in recipes %}
 			<li>
-				<a href="/recipeDetail/{{recipe.id }}"><img src="{{recipe.image}}" alt="recipes"></a>
+
+				<a href="/recipeDetail/{{recipe.id }}"><img class="img-carrousel" src="{{recipe.image}}" alt="recipes"></a>
+				<div class="like"></div>
+
 				<h3>{{recipe.recipeTitle }}</h3>
+
+
 			</li>
 		{% endfor %}
 	</ul>
@@ -69,6 +70,23 @@
 
 	<div class="favoris">
 		<h2 class="fav-recipe-title">Vos favoris</h2>
+		{% if user %}
+
+			<a href="/allFavoris">
+				<h3>Voir tout vos favoris.</h3>
+			</a>
+
+
+		{% else %}
+
+
+			<h3 class="favorisText">C'est vide ici :(
+				<br>
+				<br>
+				Connectez vous pour pouvoir ajouter des
+				<span class="favColor">favoris.</span>
+			</h3>
+		{% endif %}
 
 	</div>
 

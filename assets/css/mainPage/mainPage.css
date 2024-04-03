@@ -23,20 +23,7 @@ body {
   min-height: 100dvh;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  text-wrap: balance;
-}
-
-p {
-  text-wrap: pretty;
-}
-
-.button-model, .signup, .login {
+.button-model, .addRecipe, .logout, .signup, .login {
   padding: 7px 20px 10px 20px;
   height: 42px;
   color: white;
@@ -102,6 +89,22 @@ body {
 }
 
 .login:hover {
+  background-color: #B77E4D;
+}
+
+.logout {
+  background-color: #5FA489;
+}
+
+.logout:hover {
+  background-color: #B77E4D;
+}
+
+.addRecipe {
+  background-color: #E18323;
+}
+
+.addRecipe:hover {
   background-color: #B77E4D;
 }
 
@@ -193,6 +196,8 @@ body {
   font-family: "Quicksand";
   color: #FFDEC1;
   text-wrap: nowrap;
+  margin-top: 15px;
+  margin-bottom: 35px;
 }
 .h2-container a {
   display: inline-block;
@@ -212,6 +217,7 @@ body {
   padding: 0;
   gap: 1rem;
   flex-wrap: wrap; /* Permet le retour à la ligne des éléments flexibles */
+  position: relative;
 }
 .images-container-recipes li {
   list-style-type: none;
@@ -219,7 +225,16 @@ body {
   flex-basis: calc(20% - 1rem); /* Ajuste la largeur de chaque élément à 20% moins un espace */
   max-width: calc(20% - 1rem); /* Ajuste également la largeur maximale */
 }
-.images-container-recipes img {
+.images-container-recipes h3 {
+  font-size: 1.3rem;
+  font-family: "Quicksand";
+  color: #FFDEC1;
+  margin-top: 15px;
+  margin-bottom: 30px;
+  padding-left: 5px;
+}
+
+.img-carrousel {
   width: 300px; /* Définit la largeur */
   height: 300px; /* Définit la hauteur */
   -o-object-fit: cover;
@@ -228,13 +243,33 @@ body {
   transition: transform 0.4s ease;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   border: 1px solid #FFDEC1;
-}
-.images-container-recipes h3 {
-  font-size: 1.3rem;
-  font-family: "Quicksand";
-  color: #FFDEC1;
+  position: relative;
 }
 
+.like {
+  cursor: pointer;
+  height: 100px;
+  width: 100px;
+  background-image: url(http://abs.twimg.com/a/1446542199/img/t1/web_heart_animation.png);
+  position: absolute;
+  top: 98%;
+  transform: translate(-27%, -50%);
+}
+
+.anim-like {
+  animation-name: anim-like;
+  animation-duration: 0.8s;
+  animation-timing-function: steps(28);
+}
+
+@keyframes anim-like {
+  from {
+    background-position: left;
+  }
+  to {
+    background-position: right;
+  }
+}
 .images-container-recipes li img:hover {
   transform: scale(1.1);
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
@@ -279,17 +314,21 @@ body {
 .images-container-day li {
   list-style-type: none;
   font-family: "Quicksand";
-  flex-basis: calc(20% - 1rem); /* Ajuste la largeur de chaque élément à 20% moins un espace */
-  max-width: calc(20% - 1rem); /* Ajuste également la largeur maximale */
 }
 .images-container-day h3 {
   font-size: 1.3rem;
   font-family: "Quicksand";
   color: #FFDEC1;
+  padding-left: 10px;
+}
+
+.images-container-day li img:hover {
+  transform: scale(1.04);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
 .day-img {
-  width: 600px; /* Définit la largeur */
+  width: 400px; /* Définit la largeur */
   height: 300px; /* Définit la hauteur */
   -o-object-fit: cover;
      object-fit: cover; /* Pour conserver les proportions de l'image */
@@ -310,9 +349,20 @@ body {
 }
 
 .fav-recipe-title {
-  font-size: 1.7rem;
+  font-size: 1.9rem;
   font-family: "Quicksand";
   color: #FFDEC1;
+}
+
+.favorisText {
+  padding-top: 25px;
+  font-size: 1.5rem;
+  font-family: "Quicksand";
+  color: #FFDEC1;
+}
+
+.favColor {
+  color: black;
 }
 
 @media only screen and (max-width: 1130px) {
