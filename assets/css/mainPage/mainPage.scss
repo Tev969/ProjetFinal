@@ -276,6 +276,100 @@ body {
 }
 
 
+.foot-page {
+    margin-top:35px ;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.container-day {
+    background-color: $second-color;
+    padding: 0;
+    gap: 1rem;
+    flex-wrap: wrap; 
+    width: 65%;
+    border-radius: $big-radius;
+    padding: 1px 55px 1px 55px;
+}
+
+.day-recipe {
+   display: flex;
+
+
+
+   h2 {
+    align-items: start;
+    font-size: 2rem;
+    font-family: $quickSandFont;
+    color: $background-color;
+}
+
+
+}
+
+.day-img {
+    width: 55px;
+} 
+
+
+.images-container-day {
+    display: flex;
+    padding: 0;
+    gap: 1rem;
+    flex-wrap: wrap; /* Permet le retour à la ligne des éléments flexibles */
+
+    li {
+        list-style-type: none;
+        font-family: $quickSandFont;
+        flex-basis: calc(20% - 1rem); /* Ajuste la largeur de chaque élément à 20% moins un espace */
+        max-width: calc(20% - 1rem); /* Ajuste également la largeur maximale */
+    }
+
+
+
+    h3 {
+        font-size: 1.3rem;
+        font-family: $quickSandFont;
+        color: $background-color;
+    }
+}
+
+.day-img {
+
+        width: 600px; /* Définit la largeur */
+        height: 300px; /* Définit la hauteur */
+        object-fit: cover; /* Pour conserver les proportions de l'image */
+        border-radius: 20px;
+        transition: transform 0.4s ease;
+         box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+         border: 1px solid $background-color;
+
+     
+    }
+
+
+.favoris {
+    background-color: $main-color;
+    padding: 0;
+    gap: 0.4rem;
+    flex-wrap: wrap; 
+    width: 30%;
+    border-radius: $big-radius;
+    padding: 1px 55px 1px 55px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 

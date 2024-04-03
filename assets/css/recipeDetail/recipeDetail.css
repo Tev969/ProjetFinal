@@ -5,7 +5,7 @@ html {
 }
 
 body {
-  background-color: #FFE7C1;
+  background-color: #FFDEC1;
   margin: 0;
   display: flex;
   justify-content: center;
@@ -16,7 +16,7 @@ body {
 .top-container {
   justify-content: space-between;
   align-items: center;
-  background-color: #047D5A;
+  background-color: #5FA489;
   border-radius: 20px 20px 0px 0px;
   text-align: center;
 }
@@ -28,12 +28,12 @@ body {
   font-size: 2rem;
   font-family: "Quicksand";
   letter-spacing: 5px;
-  color: #FFE7C1;
+  color: #FFDEC1;
 }
 
 .recipe-detail-container {
   margin: 50px 0px 50px 0px;
-  background-color: #e1822d;
+  background-color: #E18323;
   border-radius: 20px;
   width: 95vw;
   display: flex;
@@ -51,7 +51,7 @@ body {
   -o-object-fit: cover;
      object-fit: cover; /* Pour conserver les proportions de l'image */
   border-radius: 20px;
-  border: 1px solid #FFE7C1;
+  border: 1px solid #FFDEC1;
   transition: background-color 0.3s ease;
   box-shadow: 0px 2px 10px 1px rgba(0, 0, 0, 0.34) inset;
   -webkit-box-shadow: 0px 2px 10px 1px rgba(0, 0, 0, 0.34) inset;
@@ -65,7 +65,7 @@ body {
 }
 .duration-people p {
   font-size: 1.2rem;
-  color: #FFE7C1;
+  color: #FFDEC1;
   gap: 25px;
   font-family: "Quicksand";
 }
@@ -86,7 +86,7 @@ body {
 .steps p {
   font-family: "Quicksand";
   font-size: 1.5rem;
-  color: #FFE7C1;
+  color: #FFDEC1;
   text-wrap: pretty;
 }
 

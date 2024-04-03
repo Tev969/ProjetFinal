@@ -35,5 +35,31 @@
 		{% endfor %}
 	</ul>
 
+</section>
+
+<section class="foot-page">
+
+<div class="container-day">
+<div class="day-recipe">
+	<h2 class="day-recipe-title">Nos recettes du jour</h2>
+</div>
+<ul class="images-container-day">
+
+
+		{% for i in 0..1 %}
+       
+			<li><a href="/recipeDetail/{{recipes[i].id }}"><img class="day-img" src="{{recipes[i].image}}" alt="recipes"></a>
+				<h3>{{recipes[i].recipeTitle }}</h3>
+			</li>
+		{% endfor %}
+	</ul>
+	</div>
+    
+    <div class="favoris">
+    	<h2 class="day-recipe-title">Vos favoris</h2>
+    
+    </div>
+
 
 </section>
+

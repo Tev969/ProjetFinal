@@ -53,7 +53,7 @@ p {
 }
 
 body {
-  background-color: #FFE7C1;
+  background-color: #FFDEC1;
   margin: 30px 40px 40px 40px;
 }
 
@@ -69,7 +69,7 @@ body {
   height: 135px;
 }
 .title-container h1 {
-  color: #e1822d;
+  color: #E18323;
   margin: 0;
   font-size: 3.5em;
   font-family: "Quicksand";
@@ -90,19 +90,19 @@ body {
 }
 
 .login {
-  background-color: #047D5A;
+  background-color: #5FA489;
 }
 
 .signup {
-  background-color: #e1822d;
+  background-color: #E18323;
 }
 
 .signup:hover {
-  background-color: #A87D55;
+  background-color: #B77E4D;
 }
 
 .login:hover {
-  background-color: #A87D55;
+  background-color: #B77E4D;
 }
 
 .search-recipe-container {
@@ -116,7 +116,7 @@ body {
 }
 
 .search-recipe {
-  background-color: #A87D55;
+  background-color: #B77E4D;
   width: 100%;
   padding: 15px;
   font-size: 16px;
@@ -147,7 +147,7 @@ body {
 
 .find {
   width: 155px;
-  background-color: #047D5A;
+  background-color: #5FA489;
   color: white;
   font-family: "Quicksand";
   border: none;
@@ -168,7 +168,7 @@ body {
   margin-top: 55px;
   display: flex;
   border-radius: 25px;
-  background-color: #e1822d;
+  background-color: #E18323;
   padding: 1px 55px 1px 55px;
   flex-direction: column;
   box-shadow: 0px 2px 10px 1px rgba(0, 0, 0, 0.34) inset;
@@ -186,12 +186,12 @@ body {
   align-items: start;
   font-size: 2rem;
   font-family: "Quicksand";
-  color: #FFE7C1;
+  color: #FFDEC1;
 }
 .h2-container h3 {
   font-size: 1.5rem;
   font-family: "Quicksand";
-  color: #FFE7C1;
+  color: #FFDEC1;
   text-wrap: nowrap;
 }
 .h2-container a {
@@ -227,17 +227,86 @@ body {
   border-radius: 20px;
   transition: transform 0.4s ease;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  border: 1px solid #FFE7C1;
+  border: 1px solid #FFDEC1;
 }
 .images-container-recipes h3 {
   font-size: 1.3rem;
   font-family: "Quicksand";
-  color: #FFE7C1;
+  color: #FFDEC1;
 }
 
 .images-container-recipes li img:hover {
   transform: scale(1.1);
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.foot-page {
+  margin-top: 35px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.container-day {
+  background-color: #5FA489;
+  padding: 0;
+  gap: 1rem;
+  flex-wrap: wrap;
+  width: 65%;
+  border-radius: 20px;
+  padding: 1px 55px 1px 55px;
+}
+
+.day-recipe {
+  display: flex;
+}
+.day-recipe h2 {
+  align-items: start;
+  font-size: 2rem;
+  font-family: "Quicksand";
+  color: #FFDEC1;
+}
+
+.day-img {
+  width: 55px;
+}
+
+.images-container-day {
+  display: flex;
+  padding: 0;
+  gap: 1rem;
+  flex-wrap: wrap; /* Permet le retour à la ligne des éléments flexibles */
+}
+.images-container-day li {
+  list-style-type: none;
+  font-family: "Quicksand";
+  flex-basis: calc(20% - 1rem); /* Ajuste la largeur de chaque élément à 20% moins un espace */
+  max-width: calc(20% - 1rem); /* Ajuste également la largeur maximale */
+}
+.images-container-day h3 {
+  font-size: 1.3rem;
+  font-family: "Quicksand";
+  color: #FFDEC1;
+}
+
+.day-img {
+  width: 600px; /* Définit la largeur */
+  height: 300px; /* Définit la hauteur */
+  -o-object-fit: cover;
+     object-fit: cover; /* Pour conserver les proportions de l'image */
+  border-radius: 20px;
+  transition: transform 0.4s ease;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  border: 1px solid #FFDEC1;
+}
+
+.favoris {
+  background-color: #E18323;
+  padding: 0;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+  width: 30%;
+  border-radius: 20px;
+  padding: 1px 55px 1px 55px;
 }
 
 @media only screen and (max-width: 1130px) {
