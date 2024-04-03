@@ -251,7 +251,7 @@ body {
   padding: 0;
   gap: 1rem;
   flex-wrap: wrap;
-  width: 65%;
+  width: 67%;
   border-radius: 20px;
   padding: 1px 55px 1px 55px;
 }
@@ -307,6 +307,12 @@ body {
   width: 30%;
   border-radius: 20px;
   padding: 1px 55px 1px 55px;
+}
+
+.fav-recipe-title {
+  font-size: 1.7rem;
+  font-family: "Quicksand";
+  color: #FFDEC1;
 }
 
 @media only screen and (max-width: 1130px) {
@@ -365,4 +371,7 @@ body {
     flex-basis: 100%; /* Chaque élément occupe la pleine largeur de son conteneur */
     max-width: 100%; /* Ajuste également la largeur maximale */
   }
+}
+.headerContainer {
+  background-color: #45a049;
 }/*# sourceMappingURL=mainPage.css.map */

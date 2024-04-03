@@ -17,9 +17,14 @@ loginRouter.post("/login", async (req, res) => {
       if (user) {
         // si il existe
         if (bcrypt.compareSync(req.body.password, user.password)) {
+            
           // on compare les mdp
           req.session.user = user; // on stockes user en session
-          res.redirect("/MainPage"); // on redidrige vers le panel admin
+          res.redirect("/MainPage", {
+            user: user,
+          }); // on redidrige vers le panel admin
+         
+            
         } else {
           throw { password: "Mauvais mot de passe" };
         }

@@ -14,8 +14,20 @@
 	</div>
 
 	<div class="login-signup">
+		{% if user.id %}
+
+
+			<a class="login" href="/login">ocucococ</a>
+			<a class="signup" href="/subscribe">S'CCCCc</a>
+
+
+		
+       {% else %}
+        
 		<a class="login" href="/login">Connexion</a>
 		<a class="signup" href="/subscribe">S'inscrire</a>
+        
+        {% endif %}
 	</div>
 
 </section>
@@ -29,7 +41,8 @@
 	</div>
 	<ul class="images-container-recipes">
 		{% for recipe in recipes %}
-			<li><a href="/recipeDetail/{{recipe.id }}"><img  src="{{recipe.image}}" alt="recipes"></a>
+			<li>
+				<a href="/recipeDetail/{{recipe.id }}"><img src="{{recipe.image}}" alt="recipes"></a>
 				<h3>{{recipe.recipeTitle }}</h3>
 			</li>
 		{% endfor %}
@@ -39,27 +52,25 @@
 
 <section class="foot-page">
 
-<div class="container-day">
-<div class="day-recipe">
-	<h2 class="day-recipe-title">Nos recettes du jour</h2>
-</div>
-<ul class="images-container-day">
+	<div class="container-day">
+		<div class="day-recipe">
+			<h2 class="day-recipe-title">Nos recettes du jour</h2>
+		</div>
+		<ul class="images-container-day">
+			{% for i in 0..1 %}
 
-
-		{% for i in 0..1 %}
-       
-			<li><a href="/recipeDetail/{{recipes[i].id }}"><img class="day-img" src="{{recipes[i].image}}" alt="recipes"></a>
-				<h3>{{recipes[i].recipeTitle }}</h3>
-			</li>
-		{% endfor %}
-	</ul>
+				<li>
+					<a href="/recipeDetail/{{recipes[i].id }}"><img class="day-img" src="{{recipes[i].image}}" alt="recipes"></a>
+					<h3>{{recipes[i].recipeTitle }}</h3>
+				</li>
+			{% endfor %}
+		</ul>
 	</div>
-    
-    <div class="favoris">
-    	<h2 class="day-recipe-title">Vos favoris</h2>
-    
-    </div>
+
+	<div class="favoris">
+		<h2 class="fav-recipe-title">Vos favoris</h2>
+
+	</div>
 
 
 </section>
-
