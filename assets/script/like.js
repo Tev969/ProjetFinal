@@ -1,6 +1,6 @@
-const like = document.querySelectorAll('.like');
-
-let countLike = 0;
+const likes = document.querySelectorAll('.like');
+likes.forEach(like => {
+    let countLike = 0;
 like.addEventListener('click', () => {
 
     if(countLike === 0) {
@@ -17,5 +17,7 @@ like.addEventListener('click', () => {
 like.addEventListener('animationend', () => {
     like.classList.toggle('anim-like');
 })
+
+});
 
 

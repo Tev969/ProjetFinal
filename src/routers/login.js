@@ -8,6 +8,16 @@ loginRouter.get("/login", (req, res) => {
   res.render("login/index.html.twig");
 });
 
+
+const isLoggedIn = (req, res, next) => {
+    if (req.session.user) {
+      next(); // Si l'utilisateur est connecté, continuez
+    } else {
+      res.redirect("/login"); // Sinon, redirigez l'utilisateur vers la page de connexion
+    }
+  };
+  
+
 loginRouter.post("/login", async (req, res) => {
   try {
     let user = await subscribeModel.findOne({ email: req.body.email }); // on recherche l'email
@@ -31,6 +41,12 @@ loginRouter.post("/login", async (req, res) => {
     });
   }
 });
+
+loginRouter.get("/MainPage", isLoggedIn, (req, res) => {
+    res.render("mainPage.html.twig", {
+      user: req.session.user // Envoyez les données de l'utilisateur à la page principale
+    });
+  });
 
 loginRouter.get("/logout", function (req, res) {
   req.session.destroy();

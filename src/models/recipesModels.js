@@ -57,16 +57,33 @@ const recipesSchema = new mongoose.Schema({
   },
 
 
-//   instruction: {
-//       type: [],
-//   },
+  instruction: {
+      type: [],
+  },
 
 
-//   ingredients: {
-//       type: [{name:String , quantity:Number, }],
-//   },
+  ingredients: {
+      type: [{name:String , quantity:Number, }],
+  },
 
 });
+
+// recipesSchema.pre("save", async function (next) {
+//     await subscribeModel.updateOne(
+//       { _id: this._user },
+//       { $addToSet: { recipeCollection: this._id } }
+//     );
+//     next();
+//   });
+  
+//   recipesSchema.post("deleteOne", async function (next) {
+//     const deletedEmployeeId = this.getQuery()._id;
+//     await subscribeModel.updateOne(
+//       { recipeCollection: { $in: [deletedEmployeeId] } },
+//       { $pull: { recipeCollection: deletedEmployeeId } }
+//     );
+//   });
+  
 
 const recipesModel = mongoose.model("recipes", recipesSchema);
 module.exports = recipesModel;
