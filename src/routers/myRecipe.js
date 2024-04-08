@@ -6,6 +6,7 @@ const mongoose = require("mongoose");
 const bcrypt = require("bcrypt");
 const authguard = require("../../services/authguard");
 const multer = require("../../services/multer-config");
+const upload = require("../../services/multer-config");
 
 myRecipeRouter.get("/addRecipe", async (req, res) => {
   res.render("myRecipe/index.html.twig", {
@@ -89,7 +90,7 @@ myRecipeRouter.get("/updateRecipe/:recipeid", authguard, async (req, res) => {
 
 myRecipeRouter.post("/update/:recipeid",
   authguard,
-  multer.single("photo"),
+  upload.single("image"),
   async (req, res) => {
     try {
       if (req.file) {
