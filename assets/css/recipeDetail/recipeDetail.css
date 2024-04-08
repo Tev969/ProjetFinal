@@ -98,4 +98,24 @@ body {
 .ingredients h2 {
   color: BLACK;
   font-family: "Quicksand";
+}
+
+.return {
+  margin-left: 25px;
+}
+.return img {
+  width: 3%;
+  transition: transform 0.3s ease;
+}
+
+.returnImg:hover {
+  transform: scale(1.2);
+}
+
+.ingredient-list {
+  justify-content: space-between;
+  color: #FFDEC1;
+  font-size: 1.1rem;
+  font-family: "Quicksand";
+  text-wrap: balance;
 }/*# sourceMappingURL=recipeDetail.css.map */

@@ -1,16 +1,25 @@
 <section class="my-recipe-container">
-<div class="top">
-<h1>Retrouver ici toutes <span>vos</span> recettes</h1>
-	<a class="addOneRecipe" href="/addOneRecipe">Ajouter une recette</a>
+	<div class="top">
+		<h1>Retrouver ici toutes
+			<span>vos</span>
+			recettes</h1>
+		<a class="addOneRecipe" href="/addOneRecipe">Ajouter une recette</a>
+	</div>
+	<a class="return" href="/MainPage"><img class="returnImg" src="/images/back.png" alt=""></a>
 
+<div class="show-all-recipes">
+	{% for recipes in user.recipeCollection %}
+		
+			<ul class="images-container-recipes">
 
+				<li>
+					<a href="/recipeDetail/{{recipes.id }}"><img class="img" src="/images/uploads/{{recipes.image }}" alt="recipes"></a>
+					<h3>{{recipes.recipeTitle }}</h3>
+				</li>
+
+			</ul>
+		
+	{% endfor %}
 </div>
-
-{% for recipe in user.recipeCollection %}
-    
-{% endfor %}
-
-
-
 
 </section>

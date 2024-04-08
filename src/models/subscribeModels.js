@@ -41,7 +41,7 @@ const subscribeSchema = new mongoose.Schema({
   recipeCollection: [
     {
       type: mongoose.Schema.Types.ObjectId,
-      ref: "recipe",
+      ref: "recipes",
     },
   ],
 });

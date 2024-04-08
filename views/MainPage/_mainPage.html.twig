@@ -39,7 +39,7 @@
 		{% for recipe in recipes %}
 			<li>
 
-				<a href="/recipeDetail/{{recipe.id }}"><img class="img-carrousel" src="{{recipe.image}}" alt="recipes"></a>
+				<a href="/recipeDetail/{{recipe.id }}"><img class="img-carrousel" src="/images/uploads/{{recipe.image}}" alt="recipes"></a>
 				<div class="like"></div>
 
 				<h3>{{recipe.recipeTitle }}</h3>
@@ -61,8 +61,10 @@
 			{% for i in 0..1 %}
 
 				<li>
-					<a href="/recipeDetail/{{recipes[i].id }}"><img class="day-img" src="{{recipes[i].image}}" alt="recipes"></a>
+					<a href="/recipeDetail/{{recipes[i].id }}"><img class="day-img" src="/images/uploads/{{recipes[i].image}}" alt="recipes"></a>
+
 					<h3>{{recipes[i].recipeTitle }}</h3>
+                    
 				</li>
 			{% endfor %}
 		</ul>

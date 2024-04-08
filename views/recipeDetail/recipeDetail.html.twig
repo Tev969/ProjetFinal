@@ -4,44 +4,48 @@
 		<h1>
 			{{recipes.recipeTitle}}
 		</h1>
+             <a class="return"  href="/MainPage"><img  class="returnImg" src="/images/back.png" alt=""></a>
 
 	</div>
 
 	<div class="container">
 		<div class="ingredient-details">
-			<img src="{{recipes.image}}" alt="">
+			<img src="/images/uploads/{{recipes.image}}" alt="">
 
 
 			<div class="duration-people">
 				<p>
 					Temps :
-					{{recipes.duration }}
-					mins</p>
+					{{recipes.duration}}
+					H</p>
+
+                    <p>
+                    Prix :
+                    {{recipes.price }}
+                    €
+                    </p>
 				<p>Difficulté :
 					{{recipes.difficulty }}</p>
-				<p>{{recipes.numberOfPeoples}}
-					Personnes</p>
 
 
 			</div>
 
 			<div class="ingredients">
 				<h2>Ingrédients</h2>
+                <div class="ingredient-list">
+                {% for ingredient in recipes.ingredients %}
+                     <p>{{ingredient.name}}  {{ingredient.quantity}}</p>
+                {% endfor %}
+                </div>
 			</div>
 		</div>
 
 
 		<div class="steps">
-			<h3>Etapes 1<p>Bonjour ceci et la premiere etape blablavalablabblabla ahgahahhahaahhaha djdjdjdjjdjdjdjd</p>
+        {% for step in recipes.steps %}
+            <h3><p>{{step }}</p>
 			</h3>
-			<h3>Etapes 2<p>Bonjour ceci et la premiere etape blablavalablabblabla</p>
-			</h3>
-			<h3>Etapes 3<p>Bonjour ceci et la premiere etape blablavalablabblabla</p>
-			</h3>
-			<h3>Etapes 4<p>Bonjour ceci et la premiere etape blablavalablabblabla</p>
-			</h3>
-
-
+        {% endfor %}
 		</div>
 
 	</div>

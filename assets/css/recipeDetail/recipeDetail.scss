@@ -21,6 +21,7 @@ body {
     border-radius: 20px 20px 0px 0px;
     text-align: center;
 
+
     ul {
         margin: 0;
         padding: 0;
@@ -109,4 +110,28 @@ body {
         font-family: $quickSandFont;
     }
 
+}
+
+.return {
+
+    margin-left: 25px;
+        img {
+      width: 3%;
+      transition: transform 0.3s ease;
+        }
+    }
+    
+    
+    
+    .returnImg:hover {
+    
+      transform: scale(1.2);
+    }
+    
+.ingredient-list {
+    justify-content: space-between;
+    color: $background-color;
+    font-size: 1.1rem;
+    font-family: $quickSandFont;
+    text-wrap: balance;
 }

@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+const subscribeModel = require('./subscribeModels')
 const recipesSchema = new mongoose.Schema({
  
     image: {
@@ -6,7 +7,7 @@ const recipesSchema = new mongoose.Schema({
     required: [true, "url de recettes requis"],
     validate: {
       validator: function (v) {
-        return /^https?:\/\/\S+?\.(?:jpg|jpeg|png|gif)$/g.test(v);
+        return /^\S+?\.(?:jpg|jpeg|png|gif)$/g.test(v);
       },
       message: "Entrer un url de recettes valide",
     },
@@ -17,64 +18,44 @@ const recipesSchema = new mongoose.Schema({
     required: [true, "Titre de recettes requis"],
     validate: {
       validator: function (v) {
-        return /^[a-zA-Z\s'-]+$/g.test(v);
+        return /^[a-zA-Z\s'éèàâêîôûùç'-]+$/g.test(v);
       },
       message: "Entrer un titre de recettes valide",
     },
   },
 
   duration: {
-      type: Number,
+      type: String,
       required: [true , "Temps de recettes necéssaire requis"],
-      validate: {
-          validator: function (v) {
-            return /^[1-9]$/g.test(v);
-          },
-          message: "Entrer un nombre valide",
-        },
   },
 
   difficulty: {
       type: String,
       required: [true , "Difficulé de recettes requis"],
-      validate: {
-          validator: function (v) {
-            return /^[a-zA-Z\s'-]+$/g.test(v);
-          },
-          message: "Entrer une difficulté de recettes valide",
-        },
   },
 
-  numberOfPeoples: {
-      type: Number,
-      required: [true , "Nombre de personnes necéssaire requis"],
-      validate: {
-          validator: function (v) {
-            return /^[1-9]$/g.test(v);
-          },
-          message: "Entrer un nombre valide",
-        },
+  price: {
+    type: String,
+    required: [true , "prixde recettes requis"],
+},
+
+    steps: {
+      type: [String],
   },
 
 
-  instruction: {
-      type: [],
+    ingredients: {
+      type: [{name:String , quantity:Number}],
   },
-
-
-  ingredients: {
-      type: [{name:String , quantity:Number, }],
-  },
-
 });
 
-// recipesSchema.pre("save", async function (next) {
-//     await subscribeModel.updateOne(
-//       { _id: this._user },
-//       { $addToSet: { recipeCollection: this._id } }
-//     );
-//     next();
-//   });
+recipesSchema.pre("save", async function (next) {
+    await subscribeModel.updateOne(
+      { _id: this._user },
+      { $addToSet: { recipeCollection: this._id } }
+    );
+    next();
+  });
   
 //   recipesSchema.post("deleteOne", async function (next) {
 //     const deletedEmployeeId = this.getQuery()._id;

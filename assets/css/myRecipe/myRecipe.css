@@ -60,4 +60,40 @@ body {
 
 .addOneRecipe:hover {
   background-color: #B77E4D;
+}
+
+.return {
+  display: flex;
+  margin-left: 25px;
+}
+.return img {
+  width: 5%;
+  transition: transform 0.3s ease;
+}
+
+li::marker {
+  list-style: none;
+  list-style-type: none;
+}
+
+.returnImg:hover {
+  transform: scale(1.2);
+}
+
+.img {
+  height: 300px; /* Définit la hauteur */
+  width: 200px;
+  -o-object-fit: cover;
+     object-fit: cover; /* Pour conserver les proportions de l'image */
+  border-radius: 20px;
+  border: 1px solid #FFDEC1;
+  transition: background-color 0.3s ease;
+  box-shadow: 0px 2px 10px 1px rgba(0, 0, 0, 0.34) inset;
+  -webkit-box-shadow: 0px 2px 10px 1px rgba(0, 0, 0, 0.34) inset;
+  -moz-box-shadow: 0px 2px 10px 1px rgba(0, 0, 0, 0.34) inset;
+}
+
+.show-all-recipes {
+  display: flex;
+  flex-wrap: wrap;
 }/*# sourceMappingURL=myRecipe.css.map */

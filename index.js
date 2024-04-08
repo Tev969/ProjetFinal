@@ -3,6 +3,7 @@ const twig = require("twig");
 const express = require("express");
 const session = require("express-session");
 const mongoose = require("mongoose");
+const axios = require("axios")
 const mainPageRouter = require("./src/routers/mainPage");
 const allRecipesRouter = require("./src/routers/allRecipes");
 const recipeDetailsRouter = require("./src/routers/recipeDetails");

@@ -328,7 +328,7 @@ body {
 }
 
 .day-img {
-  width: 400px; /* Définit la largeur */
+  width: 350px; /* Définit la largeur */
   height: 300px; /* Définit la hauteur */
   -o-object-fit: cover;
      object-fit: cover; /* Pour conserver les proportions de l'image */
