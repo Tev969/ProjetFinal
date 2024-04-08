@@ -67,12 +67,10 @@ myRecipeRouter.get("/deleteRecipe/:recipeid", authguard, async (req, res) => {
   }
 });
 
-
-
-myRecipeRouter.get("/updateRecipe/:recipeid", authguard , async (req, res) => {
+myRecipeRouter.get("/updateRecipe/:recipeid", authguard, async (req, res) => {
   try {
     let recipe = await recipesModel.findById(req.params.recipeid);
-    res.render("addRecipe/index.html.twig", {
+    res.render("updateRecipe/index.html.twig", {
       user: await recipesModel.findById(req.session.user._id),
       recipe: recipe,
     });
@@ -81,30 +79,31 @@ myRecipeRouter.get("/updateRecipe/:recipeid", authguard , async (req, res) => {
     res.render("MainPage/index.html.twig", {
       user: await subscribeModel
         .findById(req.session.user._id)
-        .populate("employeeCollection"),
-      errorMessage: "Utilisateur que vous souhaitez modifier n'existe pas",
-      user: await employeeModel.findById(req.session.user._id),
+        .populate("recipeCollection"),
+      errorMessage: "La recete que vous souhaitez modifier n'existe pas",
+      user: await recipesModel.findById(req.session.user._id),
     });
   }
 });
 
-//   employeeRouter.post(
-//     "/update/:employeeid",
-//     authguard,
-//     upload.single("photo"),
-//     async (req, res) => {
-//       try {
-//         if (req.file) {
-//           req.body.photo = req.file.filename;
-//         }
-//         await employeeModel.updateOne({ _id: req.params.employeeid }, req.body);
-//         res.redirect("/principalPage");
-//       } catch (error) {
-//         res.render("principalPage/index.html.twig", {
-//           errorDelete: "Probleme survenue ",
-//         });
-//       }
-//     }
-//   );
+
+myRecipeRouter.post("/update/:recipeid",
+  authguard,
+  multer.single("photo"),
+  async (req, res) => {
+    try {
+      if (req.file) {
+        req.body.image = req.file.filename;
+      }
+      await recipesModel.updateOne({ _id: req.params.recipeid }, req.body);
+      res.redirect("/addRecipe");
+    } catch (error) {
+        console.log(error);
+      res.render("MainPage/index.html.twig", {
+        errorDelete: "Probleme survenue ",
+      });
+    }
+  }
+);
 
 module.exports = myRecipeRouter;

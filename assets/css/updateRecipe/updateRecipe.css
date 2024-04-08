@@ -1,1 +1,191 @@
-/*# sourceMappingURL=updateRecipe.css.map */
+@charset "UTF-8";
+body {
+  background-color: #FFDEC1;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.add-recipe-container {
+  padding: 30px 30px 30px 30px;
+  justify-content: center;
+}
+
+.add-recipe-title {
+  font-size: 2rem;
+  font-family: "Quicksand";
+  letter-spacing: 5px;
+  color: #FFDEC1;
+}
+
+.add-recipe-form {
+  margin-left: 45px;
+  margin-right: 45px;
+  background-color: #E18323;
+  border-radius: 20px;
+  width: 75vw;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-label {
+  font-size: 1.2rem;
+  color: #FFDEC1;
+  font-family: "Quicksand";
+}
+
+.form-input {
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid #FFDEC1;
+  background-color: #E18323;
+  color: #FFDEC1;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #FFDEC1;
+}
+
+.add-recipe-button {
+  width: 50%;
+  margin: 0 auto;
+  padding: 0.7rem;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  border: none;
+  background-color: #5FA489;
+  color: #FFDEC1;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-recipe-button:hover {
+  background-color: #396453;
+}
+
+.form-label-ingredients,
+.form-label-steps {
+  font-size: 1.2rem;
+  color: #FFDEC1;
+  font-family: "Quicksand";
+}
+
+.form-input-textarea {
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid #FFDEC1;
+  background-color: #E18323;
+  color: #FFDEC1;
+  resize: vertical; /* Permet le redimensionnement vertical uniquement */
+}
+
+.form-input-textarea:focus {
+  outline: none;
+  border-color: #E18323;
+}
+
+#price {
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid #FFDEC1;
+  background-color: #E18323;
+  color: #FFDEC1;
+}
+
+#price:focus {
+  outline: none;
+  border-color: #E18323;
+}
+
+.form-label-duration {
+  font-size: 1.2rem;
+  color: #FFDEC1;
+  font-family: "Quicksand";
+}
+
+/* Styles pour le champ de durée */
+#duration {
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid #FFDEC1;
+  background-color: #E18323;
+  color: #FFDEC1;
+}
+
+#duration:focus {
+  outline: none;
+  border-color: #E18323;
+}
+
+.add-ingredient-button,
+.add-step-button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border: 2px solid #FFDEC1;
+  border-radius: 5px;
+  background-color: transparent;
+  font-family: "Quicksand";
+  color: #FFDEC1;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.add-ingredient-button:hover,
+.add-step-button:hover {
+  background-color: #5FA489;
+  color: #fff;
+}
+
+.add-ingredient-button::-moz-placeholder, .add-step-button::-moz-placeholder {
+  color: white;
+}
+
+.add-ingredient-button::placeholder,
+.add-step-button::placeholder {
+  color: white;
+}
+
+#steps {
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid #FFDEC1;
+  background-color: #E18323;
+  color: #FFDEC1;
+  resize: vertical; /* Permet le redimensionnement vertical uniquement */
+}
+#steps #steps:focus {
+  outline: none;
+  border-color: #E18323;
+}
+
+.return {
+  display: flex;
+  justify-content: center;
+}
+.return img {
+  width: 5%;
+  height: 5%;
+  transition: transform 0.3s ease;
+}
+
+.returnImg:hover {
+  transform: scale(1.2);
+}/*# sourceMappingURL=updateRecipe.css.map */
