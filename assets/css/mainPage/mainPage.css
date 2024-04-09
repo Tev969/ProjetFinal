@@ -26,7 +26,7 @@ body {
 .button-model, .addRecipe, .logout, .signup, .login {
   padding: 7px 20px 10px 20px;
   height: 42px;
-  color: white;
+  color: black;
   text-align: center;
   text-decoration: none;
   border-radius: 8px;
@@ -34,9 +34,7 @@ body {
   font-family: "Quicksand";
   font-size: 1.3rem;
   transition: background-color 0.4s ease;
-  box-shadow: 0px 2px 10px 1px rgba(0, 0, 0, 0.34); /* Ombre à l'extérieur */
-  -webkit-box-shadow: 0px 2px 10px 1px rgba(0, 0, 0, 0.34); /* Pour les navigateurs Webkit */
-  -moz-box-shadow: 0px 2px 10px 1px rgba(0, 0, 0, 0.34); /* Pour les navigateurs Firefox */
+  border-bottom: 4px solid black;
 }
 
 body {
@@ -77,19 +75,27 @@ body {
 }
 
 .login {
-  background-color: #5FA489;
+  background-color: #FFD371;
+  transition: 0.3s ease;
 }
 
 .signup {
-  background-color: #F15B3F;
+  background-color: #FFD371;
+  transition: 0.3s ease;
 }
 
 .signup:hover {
-  background-color: #B77E4D;
+  background-color: #F15B3F;
+  border-bottom: 2.5px solid black;
+  transform: translateY(3px);
+  color: #FEF7E6;
 }
 
 .login:hover {
-  background-color: #B77E4D;
+  background-color: #F15B3F;
+  border-bottom: 2.5px solid black;
+  transform: translateY(3px);
+  color: #FEF7E6;
 }
 
 .logout {
@@ -97,7 +103,7 @@ body {
 }
 
 .logout:hover {
-  background-color: #B77E4D;
+  background-color: #FFD371;
 }
 
 .addRecipe {
@@ -105,7 +111,7 @@ body {
 }
 
 .addRecipe:hover {
-  background-color: #B77E4D;
+  background-color: #FFD371;
 }
 
 .search-recipe-container {
@@ -119,19 +125,17 @@ body {
 }
 
 .search-recipe {
-  background-color: #B77E4D;
+  background-color: #FEF7E6;
   width: 100%;
   padding: 15px;
   font-size: 16px;
   border: 1px solid #ccc;
   border-radius: 8px 0px 0px 8px;
   box-sizing: border-box;
-  color: whitesmoke;
+  color: #F15B3F;
   font-family: "Quicksand";
-  border: none;
-  box-shadow: 0px 2px 10px 1px rgba(0, 0, 0, 0.34); /* Ombre à l'extérieur */
-  -webkit-box-shadow: 0px 2px 10px 1px rgba(0, 0, 0, 0.34); /* Pour les navigateurs Webkit */
-  -moz-box-shadow: 0px 2px 10px 1px rgba(0, 0, 0, 0.34); /* Pour les navigateurs Firefox */
+  border: 1px solid #F15B3F;
+  border-right: none;
 }
 
 .search-recipe:focus {
@@ -139,32 +143,30 @@ body {
 }
 
 .search-recipe::-moz-placeholder {
-  color: white;
+  color: #F15B3F;
   font-family: "Quicksand";
 }
 
 .search-recipe::placeholder {
-  color: white;
+  color: #F15B3F;
   font-family: "Quicksand";
 }
 
 .find {
   width: 155px;
-  background-color: #5FA489;
-  color: white;
+  background-color: #F15B3F;
+  color: #FEF7E6;
   font-family: "Quicksand";
-  border: none;
+  border: 1px solid #F15B3F;
   border-radius: 0px 8px 8px 0px;
   padding: 10px 20px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  box-shadow: 0px 2px 10px 1px rgba(0, 0, 0, 0.34); /* Ombre à l'extérieur */
-  -webkit-box-shadow: 0px 2px 10px 1px rgba(0, 0, 0, 0.34); /* Pour les navigateurs Webkit */
-  -moz-box-shadow: 0px 2px 10px 1px rgba(0, 0, 0, 0.34); /* Pour les navigateurs Firefox */
 }
 
 .find:hover {
-  background-color: #45a049;
+  background-color: #FFD371;
+  color: black;
 }
 
 .recipes-container {
@@ -172,7 +174,7 @@ body {
   display: flex;
   border-radius: 25px;
   background-color: #F15B3F;
-  padding: 1px 25px 1px 25px;
+  padding: 1px 55px 1px 55px;
   flex-direction: column;
 }
 
@@ -200,16 +202,13 @@ body {
 .images-container-recipes {
   display: flex;
   padding: 0;
-  gap: 1rem;
-  flex-wrap: wrap; /* Permet le retour à la ligne des éléments flexibles */
+  gap: 1.5rem;
   position: relative;
   justify-content: center;
 }
 .images-container-recipes li {
   list-style-type: none;
   font-family: "Quicksand";
-  flex-basis: calc(20% - 1rem); /* Ajuste la largeur de chaque élément à 20% moins un espace */
-  max-width: calc(20% - 1rem); /* Ajuste également la largeur maximale */
 }
 .images-container-recipes h3 {
   font-size: 1.3rem;
@@ -485,7 +484,7 @@ button:hover .button-text {
 @media screen and (max-width: 1130px) {
   .images-container-recipes li {
     flex-basis: calc(30% - 1rem); /* Pour les écrans très petits, ajustez la largeur à 50% moins un espace */
-    max-width: calc(30% - 1rem);
+    max-width: calc(50% - 1rem);
   }
 }
 @media screen and (max-width: 768px) {

@@ -30,7 +30,7 @@ body {
 .button-model {
     padding: 7px 20px 10px 20px;
     height: 42px;
-    color: white;
+    color: black;
     text-align: center;
     text-decoration: none;
     border-radius: 8px;
@@ -38,9 +38,7 @@ body {
     font-family: $quickSandFont;
     font-size: 1.3rem;
     transition: background-color 0.4s ease;
-    box-shadow: 0px 2px 10px 1px rgba(0, 0, 0, 0.34); /* Ombre à l'extérieur */
-    -webkit-box-shadow: 0px 2px 10px 1px rgba(0, 0, 0, 0.34); /* Pour les navigateurs Webkit */
-    -moz-box-shadow: 0px 2px 10px 1px rgba(0, 0, 0, 0.34); /* Pour les navigateurs Firefox */
+    border-bottom: 4px solid black;
 }
 
 
@@ -94,20 +92,29 @@ body {
 
 .login {
     @extend .button-model;
-    background-color: $second-color;
+    background-color: $three-color;
+    transition: 0.3s ease;
 }
 
 .signup {
     @extend .button-model;
-    background-color: $main-color;
+    background-color: $three-color;
+    transition: 0.3s ease;
 }
 
 .signup:hover {
-    background-color: $three-color;
+    background-color: $main-color;
+    border-bottom: 2.5px solid black;
+    transform: translateY(3px);
+    color: $background-color;
+    
 }
 
 .login:hover {
-    background-color: $three-color;
+    background-color: $main-color;
+    border-bottom: 2.5px solid black;
+    transform: translateY(3px);
+    color: $background-color
 }
 
 .logout {
@@ -146,19 +153,18 @@ body {
 }
 
 .search-recipe {
-    background-color: $three-color;
+    background-color: $background-color;
     width: 100%;
     padding: 15px;
     font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 8px 0px 0px 8px;
     box-sizing: border-box;
-    color: whitesmoke;
+    color: $main-color;
     font-family: $quickSandFont;
-    border: none;
-    box-shadow: 0px 2px 10px 1px rgba(0, 0, 0, 0.34); /* Ombre à l'extérieur */
-    -webkit-box-shadow: 0px 2px 10px 1px rgba(0, 0, 0, 0.34); /* Pour les navigateurs Webkit */
-    -moz-box-shadow: 0px 2px 10px 1px rgba(0, 0, 0, 0.34); /* Pour les navigateurs Firefox */
+    border: 1px solid $main-color;
+    border-right: none;
+   
 }
 
 .search-recipe:focus {
@@ -166,30 +172,29 @@ body {
 }
 
 .search-recipe::placeholder {
-    color: white;
+    color: $main-color;
     font-family: $quickSandFont;
 }
 
 .find {
     width: 155px;
-    background-color: $second-color;
-    color: white;
+    background-color: $main-color;
+    color: $background-color;
     font-family: $quickSandFont;
-    border: none;
+    border: 1px solid $main-color;
+
     border-radius: 0px 8px 8px 0px;
     padding: 10px 20px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-  box-shadow: 0px 2px 10px 1px rgba(0, 0, 0, 0.34); /* Ombre à l'extérieur */
-    -webkit-box-shadow: 0px 2px 10px 1px rgba(0, 0, 0, 0.34); /* Pour les navigateurs Webkit */
-    -moz-box-shadow: 0px 2px 10px 1px rgba(0, 0, 0, 0.34); /* Pour les navigateurs Firefox */
 
 
    
 }
 
 .find:hover {
-    background-color: #45a049;
+    background-color: $three-color;
+    color: black;
 }
 
 // TODO fin barre nav
@@ -201,7 +206,7 @@ body {
     display: flex;
    border-radius: 25px;
     background-color: $main-color;
-    padding: 1px 25px 1px 25px;
+    padding: 1px 55px 1px 55px;
     flex-direction: column;
 }
 
@@ -228,18 +233,7 @@ body {
         margin-bottom: 35px;
     }
 
-    // a {
-    //     display: inline-block;
-    //     width: 50px; /* Largeur du bouton */
-    //     height: 50px; /* Hauteur du bouton */
-    //     background-color: #007bff; /* Couleur de fond */
-    //     color: #ffffff; /* Couleur du texte */
-    //     border-radius: 50%; /* Rend le bouton en forme de cercle */
-    //     text-align: center;
-    //     line-height: 50px; /* Centrer le texte verticalement */
-    //     font-size: 20px; /* Taille de la police */
-    //     text-decoration: none; /* Supprime les soulignements */
-    // }
+    
 }
 
 
@@ -247,17 +241,16 @@ body {
 .images-container-recipes {
     display: flex;
     padding: 0;
-    gap: 1rem;
-    flex-wrap: wrap; /* Permet le retour à la ligne des éléments flexibles */
+    gap: 1.5rem;
+   
     position: relative;
-justify-content: center;
+    justify-content: center;
 
 
     li {
         list-style-type: none;
         font-family: $quickSandFont;
-        flex-basis: calc(20% - 1rem); /* Ajuste la largeur de chaque élément à 20% moins un espace */
-        max-width: calc(20% - 1rem); /* Ajuste également la largeur maximale */
+
     }
 
 
@@ -576,7 +569,7 @@ button {
 @media screen and (max-width: 1130px) {
     .images-container-recipes li {
         flex-basis: calc(30% - 1rem); /* Pour les écrans très petits, ajustez la largeur à 50% moins un espace */
-        max-width: calc(30% - 1rem);
+        max-width: calc(50% - 1rem);
 }
 }
     
