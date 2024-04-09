@@ -29,7 +29,7 @@ body {
   color: black;
   text-align: center;
   text-decoration: none;
-  border-radius: 8px;
+  border-radius: 50px;
   transition: background-color 0.3s;
   font-family: "Quicksand";
   font-size: 1.3rem;
@@ -69,7 +69,7 @@ body {
 }
 
 .login-signup {
-  padding-top: 25px;
+  padding-top: 30px;
   display: flex;
   gap: 23px;
 }
@@ -130,7 +130,7 @@ body {
   padding: 15px;
   font-size: 16px;
   border: 1px solid #ccc;
-  border-radius: 8px 0px 0px 8px;
+  border-radius: 50px 0px 0px 50px;
   box-sizing: border-box;
   color: #F15B3F;
   font-family: "Quicksand";
@@ -158,7 +158,7 @@ body {
   color: #FEF7E6;
   font-family: "Quicksand";
   border: 1px solid #F15B3F;
-  border-radius: 0px 8px 8px 0px;
+  border-radius: 0px 50px 50px 0px;
   padding: 10px 20px;
   cursor: pointer;
   transition: background-color 0.3s ease;
