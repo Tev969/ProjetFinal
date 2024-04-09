@@ -99,7 +99,7 @@ body {
 }
 
 .logout {
-  background-color: #5FA489;
+  background-color: #F15B3F;
 }
 
 .logout:hover {
@@ -176,6 +176,8 @@ body {
   background-color: #F15B3F;
   padding: 1px 55px 1px 55px;
   flex-direction: column;
+  border: 1px solid black;
+  border-bottom: 4px solid black;
 }
 
 .h2-container {
@@ -267,13 +269,16 @@ body {
 }
 
 .container-day {
-  background-color: #5FA489;
+  background-color: #FFD371;
   padding: 0;
   gap: 1rem;
   flex-wrap: wrap;
   width: 67%;
   border-radius: 20px;
   padding: 1px 55px 1px 55px;
+  border: 1px solid black;
+  border-bottom: 4px solid black;
+  border-left: 4px solid black;
 }
 
 .day-recipe {
@@ -283,27 +288,22 @@ body {
   align-items: start;
   font-size: 2rem;
   font-family: "Quicksand";
-  color: #FEF7E6;
-}
-
-.day-img {
-  width: 55px;
+  color: black;
 }
 
 .images-container-day {
   display: flex;
   padding: 0;
   gap: 1rem;
-  flex-wrap: wrap; /* Permet le retour à la ligne des éléments flexibles */
 }
 .images-container-day li {
   list-style-type: none;
   font-family: "Quicksand";
 }
 .images-container-day h3 {
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   font-family: "Quicksand";
-  color: #FEF7E6;
+  color: black;
   padding-left: 10px;
 }
 
@@ -313,7 +313,7 @@ body {
 }
 
 .day-img {
-  width: 350px; /* Définit la largeur */
+  width: 550px; /* Définit la largeur */
   height: 300px; /* Définit la hauteur */
   -o-object-fit: cover;
      object-fit: cover; /* Pour conserver les proportions de l'image */
@@ -327,10 +327,12 @@ body {
   background-color: #F15B3F;
   padding: 0;
   gap: 0.4rem;
-  flex-wrap: wrap;
   width: 30%;
   border-radius: 20px;
   padding: 1px 55px 1px 55px;
+  border-bottom: 4px solid black;
+  border-right: 4px solid black;
+  border: 1px solid black;
 }
 
 .fav-recipe-title {
@@ -386,7 +388,7 @@ button.learn-more .circle .icon {
   top: 0;
   bottom: 0;
   margin: auto;
-  background: #5FA489;
+  background: #F15B3F;
 }
 
 button.learn-more .circle .icon.arrow {
