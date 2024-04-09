@@ -176,7 +176,7 @@ body {
   background-color: #F15B3F;
   padding: 1px 55px 1px 55px;
   flex-direction: column;
-  border: 1px solid black;
+  border: 2px solid black;
   border-bottom: 4px solid black;
 }
 
@@ -276,7 +276,7 @@ body {
   width: 67%;
   border-radius: 20px;
   padding: 1px 55px 1px 55px;
-  border: 1px solid black;
+  border: 2px solid black;
   border-bottom: 4px solid black;
   border-left: 4px solid black;
 }
@@ -330,9 +330,9 @@ body {
   width: 30%;
   border-radius: 20px;
   padding: 1px 55px 1px 55px;
+  border: 2px solid black;
   border-bottom: 4px solid black;
   border-right: 4px solid black;
-  border: 1px solid black;
 }
 
 .fav-recipe-title {
@@ -440,6 +440,65 @@ button:hover .circle .icon.arrow {
 
 button:hover .button-text {
   color: black;
+}
+
+.cssbuttons-io-button {
+  background: #FFD371;
+  color: black;
+  font-family: inherit;
+  padding: 0.35em;
+  padding-left: 1.2em;
+  font-size: 1.2rem;
+  font-family: "Quicksand";
+  font-weight: 500;
+  border-radius: 0.9em;
+  border: none;
+  letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  box-shadow: inset 0 0 1.6em -0.6em #FFD371;
+  overflow: hidden;
+  position: relative;
+  height: 2.8em;
+  padding-right: 3.3em;
+  cursor: pointer;
+}
+
+.cssbuttons-io-button .icon {
+  background: white;
+  margin-left: 1em;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.2em;
+  width: 2.2em;
+  border-radius: 0.7em;
+  box-shadow: 0.1em 0.1em 0.6em 0.2em transform scale(1.1) box-shadow 0 0 20px rgba(0, 0, 0, 0.5);
+  right: 0.3em;
+  transition: all 0.3s;
+}
+
+.cssbuttons-io-button:hover .icon {
+  width: calc(100% - 0.6em);
+}
+
+.cssbuttons-io-button .icon svg {
+  width: 1.1em;
+  transition: transform 0.3s;
+  color: transform scale(1.1) box-shadow 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.cssbuttons-io-button:hover .icon svg {
+  transform: translateX(0.1em);
+}
+
+.cssbuttons-io-button:active .icon {
+  transform: scale(0.95);
+}
+
+.favBtn {
+  text-decoration: none;
 }
 
 @media only screen and (max-width: 1130px) {
