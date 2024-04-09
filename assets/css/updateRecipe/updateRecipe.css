@@ -1,6 +1,6 @@
 @charset "UTF-8";
 body {
-  background-color: #FFDEC1;
+  background-color: #FEF7E6;
   margin: 0;
   display: flex;
   justify-content: center;
@@ -17,13 +17,13 @@ body {
   font-size: 2rem;
   font-family: "Quicksand";
   letter-spacing: 5px;
-  color: #FFDEC1;
+  color: #FEF7E6;
 }
 
 .add-recipe-form {
   margin-left: 45px;
   margin-right: 45px;
-  background-color: #E18323;
+  background-color: #F15B3F;
   border-radius: 20px;
   width: 75vw;
   display: flex;
@@ -37,7 +37,7 @@ body {
 
 .form-label {
   font-size: 1.2rem;
-  color: #FFDEC1;
+  color: #FEF7E6;
   font-family: "Quicksand";
 }
 
@@ -46,14 +46,14 @@ body {
   padding: 0.5rem;
   font-size: 1rem;
   border-radius: 5px;
-  border: 1px solid #FFDEC1;
-  background-color: #E18323;
-  color: #FFDEC1;
+  border: 1px solid #FEF7E6;
+  background-color: #F15B3F;
+  color: #FEF7E6;
 }
 
 .form-input:focus {
   outline: none;
-  border-color: #FFDEC1;
+  border-color: #FEF7E6;
 }
 
 .add-recipe-button {
@@ -64,7 +64,7 @@ body {
   border-radius: 5px;
   border: none;
   background-color: #5FA489;
-  color: #FFDEC1;
+  color: #FEF7E6;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
@@ -76,7 +76,7 @@ body {
 .form-label-ingredients,
 .form-label-steps {
   font-size: 1.2rem;
-  color: #FFDEC1;
+  color: #FEF7E6;
   font-family: "Quicksand";
 }
 
@@ -85,15 +85,15 @@ body {
   padding: 0.5rem;
   font-size: 1rem;
   border-radius: 5px;
-  border: 1px solid #FFDEC1;
-  background-color: #E18323;
-  color: #FFDEC1;
+  border: 1px solid #FEF7E6;
+  background-color: #F15B3F;
+  color: #FEF7E6;
   resize: vertical; /* Permet le redimensionnement vertical uniquement */
 }
 
 .form-input-textarea:focus {
   outline: none;
-  border-color: #E18323;
+  border-color: #F15B3F;
 }
 
 #price {
@@ -101,19 +101,19 @@ body {
   padding: 0.5rem;
   font-size: 1rem;
   border-radius: 5px;
-  border: 1px solid #FFDEC1;
-  background-color: #E18323;
-  color: #FFDEC1;
+  border: 1px solid #FEF7E6;
+  background-color: #F15B3F;
+  color: #FEF7E6;
 }
 
 #price:focus {
   outline: none;
-  border-color: #E18323;
+  border-color: #F15B3F;
 }
 
 .form-label-duration {
   font-size: 1.2rem;
-  color: #FFDEC1;
+  color: #FEF7E6;
   font-family: "Quicksand";
 }
 
@@ -123,25 +123,25 @@ body {
   padding: 0.5rem;
   font-size: 1rem;
   border-radius: 5px;
-  border: 1px solid #FFDEC1;
-  background-color: #E18323;
-  color: #FFDEC1;
+  border: 1px solid #FEF7E6;
+  background-color: #F15B3F;
+  color: #FEF7E6;
 }
 
 #duration:focus {
   outline: none;
-  border-color: #E18323;
+  border-color: #F15B3F;
 }
 
 .add-ingredient-button,
 .add-step-button {
   padding: 0.5rem 1rem;
   font-size: 1rem;
-  border: 2px solid #FFDEC1;
+  border: 2px solid #FEF7E6;
   border-radius: 5px;
   background-color: transparent;
   font-family: "Quicksand";
-  color: #FFDEC1;
+  color: #FEF7E6;
   cursor: pointer;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
@@ -166,14 +166,14 @@ body {
   padding: 0.5rem;
   font-size: 1rem;
   border-radius: 5px;
-  border: 1px solid #FFDEC1;
-  background-color: #E18323;
-  color: #FFDEC1;
+  border: 1px solid #FEF7E6;
+  background-color: #F15B3F;
+  color: #FEF7E6;
   resize: vertical; /* Permet le redimensionnement vertical uniquement */
 }
 #steps #steps:focus {
   outline: none;
-  border-color: #E18323;
+  border-color: #F15B3F;
 }
 
 .return {

@@ -123,3 +123,58 @@ h3 {
     width: 1.5rem;
     height: 1.5rem;
 }
+
+.card {
+    border-radius: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 4px;
+  }
+  
+  .button {
+    border: none;
+    border-radius: 10px;
+    box-shadow: inset 5px 5px 5px #c4c4c4,
+                inset -5px -5px 5px #ffffff;
+    color: #333;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-family: $quickSandFont;
+    font-size: 13px;
+    font-weight: bold;
+    margin: 3px;
+    padding: 10px;
+    text-transform: uppercase;
+  }
+  
+  .button:hover {
+    box-shadow: none;
+  }
+  
+  .svg {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+  }
+  
+  
+  .card .Post {
+    color: #333;
+  }
+  
+  .card .Post:hover {
+    background-color: #333;
+    color: #e4e4e4;
+  }
+  
+  .card .Post svg {
+    fill: #333;
+  }
+  
+  .card .Post:hover svg {
+    fill: #e4e4e4;
+  }

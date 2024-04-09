@@ -6,12 +6,12 @@
         <a class="return"  href="/addRecipe"><img  class="returnImg" src="/images/back.png" alt=""></a>
 		<div class="form-group">
 			<label for="image" class="form-label">Photo de la recette :</label>
-			<input type="file" id="photo" name="image" class="form-input">
+			<input type="file"  id="photo" name="image" class="form-input">
 		</div>
 		<div class="form-group">
 			<label for="recipeTitle" class="form-label">Titre de votre recette :</label>
-			<textarea id="name" name="recipeTitle" rows="1" class="form-input" required></textarea>
-		</div>
+			<textarea id="name" value="{{recipe.title }}" name="recipeTitle" rows="1" class="form-input" required></textarea>
+		</div>   mettre les input avec les valuer a la modification
 		<div class="form-group">
 			<label for="duration" class="form-label">Durée de la recette :</label>
 			<select id="duration" name="duration" class="form-input" required>

@@ -32,17 +32,24 @@
 
 	<div class="h2-container">
 		<h2 class="recipes">Nos recettes</h2>
-		<h3 class="show-more-text">Voir plus</h3>
-		<a class="show-more-button" href="/allRecipes">-></a>
+		<a class="show-more-button" href="/allRecipes">
+			<button class="learn-more">
+				<span class="circle" aria-hidden="true">
+					<span class="icon arrow"></span>
+				</span>
+				<span class="button-text">Voir plus</span>
+			</button>
+		</a>
+
 	</div>
 	<ul class="images-container-recipes">
-		{% for recipe in recipes %}
+		{% for i in 0..3 %}
 			<li>
 
-				<a href="/recipeDetail/{{recipe.id }}"><img class="img-carrousel" src="/images/uploads/{{recipe.image}}" alt="recipes"></a>
+				<a href="/recipeDetail/{{recipes[i].id }}"><img class="img-carrousel" src="/images/uploads/{{recipes[i].image}}" alt="recipes"></a>
 				<div class="like"></div>
 
-				<h3>{{recipe.recipeTitle }}</h3>
+				<h3>{{recipes[i].recipeTitle }}</h3>
 
 
 			</li>
@@ -64,7 +71,7 @@
 					<a href="/recipeDetail/{{recipes[i].id }}"><img class="day-img" src="/images/uploads/{{recipes[i].image}}" alt="recipes"></a>
 
 					<h3>{{recipes[i].recipeTitle }}</h3>
-                    
+
 				</li>
 			{% endfor %}
 		</ul>
