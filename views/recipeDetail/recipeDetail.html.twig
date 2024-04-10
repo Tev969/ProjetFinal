@@ -4,48 +4,44 @@
 		<h1>
 			{{recipes.recipeTitle}}
 		</h1>
-		<a class="return" href="/MainPage"><img class="returnImg" src="/images/back.png" alt=""></a>
+			<a class="return" href="/MainPage"><img class="returnImg" src="/images/return.png" alt=""></a>
+
 
 	</div>
 
 	<div class="container">
 		<div class="ingredient-details">
-        <div class="cardImg">
-		<div class="card">
-  
-  	<img src="/images/uploads/{{recipes.image}}" alt="">
-  <div class="card__content">
-    <p class="card__title">{{recipes.Title }}</p>
-    <p class="card__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-  </div>
-</div>
+			<div class="cardImg">
+				<div class="card">
+
+					<img src="/images/uploads/{{recipes.image}}" alt="">
+					<div class="card__content">
+						<p class="card__title">
+							{{recipes.recipeTitle}}</p>
+						{% for ingredient in recipes.ingredients %}
+							<p class="card__description">{{ingredient.name}}
+								{{ingredient.quantity}}</p>
 
 
+						{% endfor %}
+					</div>
+				</div>
 
-			<div class="duration-people">
-				<p>
-					Temps :
-					{{recipes.duration}}
-					H</p>
 
-				<p>
-					Prix :
-					{{recipes.price }}
+				<div class="duration-people">
+					<p>
+						Temps :
+						{{recipes.duration}}
+						H</p>
 
-				</p>
-				<p>Difficulté :
-					{{recipes.difficulty }}</p>
+					<p>
+						Prix :
+						{{recipes.price }}
 
-</div>
-			</div>
+					</p>
+					<p>Difficulté :
+						{{recipes.difficulty }}</p>
 
-			<div class="ingredients">
-				<h2>Ingrédients</h2>
-				<div class="ingredient-list">
-					{% for ingredient in recipes.ingredients %}
-						<p>{{ingredient.name}}
-							{{ingredient.quantity}}</p>
-					{% endfor %}
 				</div>
 			</div>
 		</div>
