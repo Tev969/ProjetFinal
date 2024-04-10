@@ -6,39 +6,41 @@ document.addEventListener("DOMContentLoaded", function () {
     const textArea = document.createElement("textarea");
     textArea.name = "steps";
     textArea.id = "steps";
-    (textArea.classList.add = " form-input"), "stepsInput";
+    const btn = document.createElement("button");
+    btn.innerText = "-";
+    stepsList.appendChild(btn);
+    textArea.classList.add("form-input", "stepsInput");
     stepsList.appendChild(textArea);
   });
 });
+
 
 document.addEventListener("DOMContentLoaded", function () {
   const addIngredientButton = document.getElementById("add-ingredient-button");
   const ingredientsList = document.getElementById("ingredient-list");
   let ingredientCount = 0;
-  addIngredientButton.addEventListener("click", function () {
-    const newIngredient = document.createElement("li");
-    const ingredientGroup = document.createElement("div");
-    const ingredientTextarea = document.createElement("textarea");
-    const quantityInput = document.createElement("input");
 
-    ingredientGroup.classList.add("ingredient-group");
+  addIngredientButton.addEventListener("click", function () {
+    const ingredientTextarea = document.createElement("textarea");
     ingredientTextarea.classList.add("form-input", "ingredient-textarea");
     ingredientTextarea.setAttribute("rows", "1");
     ingredientTextarea.setAttribute("required", "required");
     ingredientTextarea.setAttribute("placeholder", "Ingrédient");
     ingredientTextarea.name = `ingredients[${ingredientCount}][name]`;
 
+    const quantityInput = document.createElement("input");
     quantityInput.classList.add("form-input", "ingredient-quantity");
     quantityInput.setAttribute("type", "number");
     quantityInput.setAttribute("min", "1");
     quantityInput.setAttribute("value", "1");
     quantityInput.name = `ingredients[${ingredientCount}][quantity]`;
 
+    const ingredientGroup = document.createElement("div");
+    ingredientGroup.classList.add("ingredient-group");
     ingredientGroup.appendChild(ingredientTextarea);
     ingredientGroup.appendChild(quantityInput);
-    newIngredient.appendChild(ingredientGroup);
 
-    ingredientsList.appendChild(newIngredient);
+    ingredientsList.appendChild(ingredientGroup);
     ingredientCount++;
   });
 });

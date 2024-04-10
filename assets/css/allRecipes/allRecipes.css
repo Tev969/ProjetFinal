@@ -116,6 +116,18 @@ body {
   outline: none;
 }
 
+.return {
+  margin-left: 25px;
+}
+.return img {
+  width: 65%;
+  transition: transform 0.3s ease;
+}
+
+.returnImg:hover {
+  transform: scale(1.2);
+}
+
 .search-recipe::-moz-placeholder {
   color: #F15B3F;
   font-family: "Quicksand";

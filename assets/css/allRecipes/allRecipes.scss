@@ -119,6 +119,18 @@ body {
     outline: none;
 }
 
+.return {
+    margin-left: 25px;
+    img {
+        width: 65%;
+        transition: transform 0.3s ease;
+    }
+}
+
+.returnImg:hover {
+    transform: scale(1.2);
+}
+
 .search-recipe::placeholder {
     color: $main-color;
     font-family: $quickSandFont;
