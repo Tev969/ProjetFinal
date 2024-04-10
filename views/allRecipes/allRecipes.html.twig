@@ -6,7 +6,7 @@
 			<form class"search-bar" action="/MainPage" method="get">
 				<input type="text" action="/get" id="searchRecipe" class="search-recipe" name="find-recipe" placeholder="Rechercher une recettes...">
 				<button class="find" type="submit">Rechercher</button>
-                <img src="assets/images/accueil.svg" alt="">
+				<img src="assets/images/accueil.svg" alt="">
 			</form>
 		</div>
 	</div>
@@ -14,15 +14,17 @@
 	<div class="show-all-recipes">
 		<ul class="images-container-recipes">
 			{% for recipe in recipes %}
-            <div class="vignet">
-				<li><a href="/recipeDetail/{{recipe.id }}"><img src="/images/uploads/{{recipe.image}}" alt="recipes"></a>
-                <div class="items">
-					<h3>{{recipe.recipeTitle }}</h3>
-                 
-</div>
+				<div class="vignet">
+					<li>
+						<a href="/recipeDetail/{{recipe.id }}"><img src="/images/uploads/{{recipe.image}}" alt="recipes"></a>
+						<div class="items">
+							<h3>{{recipe.recipeTitle }}</h3>
+                            <h3>Coûts : {{recipe.price }}</h3>
 
-				</li>
-                </div>
+						</div>
+
+					</li>
+				</div>
 			{% endfor %}
 		</ul>
 	</div>

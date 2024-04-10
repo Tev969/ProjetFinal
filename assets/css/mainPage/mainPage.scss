@@ -119,20 +119,29 @@ body {
 
 .logout {
     @extend .button-model;
-    background-color: $second-color;
+    background-color: $three-color;
+    transition: 0.3s ease;
 }
 
 .logout:hover {
-        background-color: $three-color;
+        background-color: $main-color;
+        border-bottom: 2.5px solid black;
+        transform: translateY(3px);
+        color: $background-color
 }
 
 .addRecipe{
     @extend .button-model;
-    background-color: $main-color;
+    background-color: $three-color;
+    transition: 0.3s ease;
 }
 
 .addRecipe:hover {
-    background-color: $three-color;
+
+    background-color: $main-color;
+    border-bottom: 2.5px solid black;
+    transform: translateY(3px);
+    color: $background-color;
 }
 
 
@@ -162,7 +171,7 @@ body {
     box-sizing: border-box;
     color: $main-color;
     font-family: $quickSandFont;
-    border: 1px solid $main-color;
+    border: 1.5px solid $main-color;
     border-right: none;
    
 }
@@ -181,7 +190,7 @@ body {
     background-color: $main-color;
     color: $background-color;
     font-family: $quickSandFont;
-    border: 1px solid $main-color;
+    border: 1.5px solid $main-color;
 
     border-radius: 0px 50px 50px 0px;
     padding: 10px 20px;

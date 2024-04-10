@@ -42,7 +42,7 @@ form {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: 55px;
+    gap: 35px;
 }
 
 .inputGroup {
@@ -88,8 +88,8 @@ input::placeholder {
         border: none;
         padding: 1rem 2rem;
         border-radius: 10px;
-        background-color: $main-color; 
-        color: $background-color;
+        background-color: $three-color; 
+        color: black;
         font-size: 1rem;
         transition: transform 0.4s ease;
 
@@ -99,9 +99,9 @@ input::placeholder {
 }
 
 button:hover {
-    background-color: $main-color;
+    background-color: $three-color;
     transform: scale(1.1);
-    
+    color: black;
 }
 
 .redirect {
@@ -123,12 +123,19 @@ button:hover {
     padding: 1.2rem 2.2rem;
     transform: scale(1.05); /* Zoom de 5% */
     transition: transform 0.4s ease;
-    color: $main-color;
+    color: $three-color;
+}
+
+.sendForm {
+    padding-top: 45px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
 }
 
 
 .error {
-    color: red; /* couleur du texte en rouge */
+    color: rgb(251, 251, 251); /* couleur du texte en rouge */
     font-size: 15px; /* taille de la police */
     font-style: italic; /* style de police italique */
     font-family: $quickSandFont;

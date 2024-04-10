@@ -1,6 +1,6 @@
 <section class="main-container">
 
-		<img  login="lazy" class="image" src="/images/NodleLogin.svg" alt="">
+	<img login="lazy" class="image" src="/images/NodleLogin.svg" alt="">
 
 
 	<section class="registrationForm">
@@ -8,7 +8,7 @@
 			<h1 class="subscribe">Créer un compte</h1>
 
 			<div class="inputGroup">
-			
+
 				<input id="name" name="name" placeholder="Nom ou prénom." type="text" required>
 				{% if error %}
 					<p class="error">{{error.errors.name.message}}</p>
@@ -16,7 +16,7 @@
 			</div>
 
 			<div class="inputGroup">
-		
+
 				<input id="email" name="email" placeholder="Votre mail." type="mail" required>
 				{% if error %}
 					<p class="error">{{error.errors.email.message}}</p>
@@ -24,22 +24,22 @@
 			</div>
 
 			<div class="inputGroup">
-				
-				<input id="password"  name="password" placeholder="Mot de passe." type="password" required>
+
+				<input id="password" name="password" placeholder="Mot de passe." type="password" required>
 				{% if error %}
 					<p class="error">{{error.errors.password.message}}</p>
 				{% endif %}
 			</div>
+			<div class="sendForm">
+				<div class="submitGroup">
+					<button>Envoyer</button>
+				</div>
 
-			<div class="submitGroup">
-				<button>Envoyer</button>
+				<div class="redirect">
+					<a href="/login">J'ai déjà un compte</a>
+				</div>
 			</div>
-
-            <div class="redirect">
-            <a href="/login">J'ai déjà un compte</a>
-            </div>
-
-              <a class="return"  href="/MainPage"><img class="returnImg" src="/images/back.png" alt=""></a>
+			<a class="return" href="/MainPage"><img class="returnImg" src="/images/back.png" alt=""></a>
 
 		</form>
 	</section>

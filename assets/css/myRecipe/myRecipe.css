@@ -50,7 +50,7 @@ body {
   border-radius: 10px;
   transition: background-color 0.3s;
   font-family: "Quicksand";
-  background-color: #5FA489;
+  background-color: #F15B3F;
   font-size: 1.7rem;
   transition: background-color 0.4s ease;
   box-shadow: 0px 2px 10px 1px rgba(0, 0, 0, 0.34); /* Ombre à l'extérieur */
@@ -59,7 +59,7 @@ body {
 }
 
 .addOneRecipe:hover {
-  background-color: #B77E4D;
+  background-color: #FFD371;
 }
 
 .return {

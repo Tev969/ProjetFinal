@@ -63,14 +63,14 @@ body {
   font-size: 1.2rem;
   border-radius: 5px;
   border: none;
-  background-color: #5FA489;
+  background-color: #F15B3F;
   color: #FEF7E6;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
 .add-recipe-button:hover {
-  background-color: #396453;
+  background-color: #bc290e;
 }
 
 .form-label-ingredients,
@@ -148,7 +148,7 @@ body {
 
 .add-ingredient-button:hover,
 .add-step-button:hover {
-  background-color: #5FA489;
+  background-color: #F15B3F;
   color: #fff;
 }
 

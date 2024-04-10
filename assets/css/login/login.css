@@ -13,7 +13,7 @@ body {
   margin: 3rem 5rem 3rem 5rem;
   height: 90vh;
   border: 2px solid #F15B3F;
-  background-color: #5FA489;
+  background-color: #F15B3F;
 }
 
 .image {
@@ -26,7 +26,7 @@ body {
   border-radius: 25px;
   padding: 2rem 3rem;
   text-align: center;
-  background-color: #5FA489;
+  background-color: #F15B3F;
 }
 .registrationForm h1 {
   font-size: 3rem;
@@ -38,7 +38,7 @@ form {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 55px;
+  gap: 35px;
 }
 
 .inputGroup {
@@ -79,36 +79,46 @@ input::placeholder {
   border: none;
   padding: 1rem 2rem;
   border-radius: 10px;
-  background-color: #F15B3F;
-  color: #FEF7E6;
+  background-color: #FFD371;
+  color: black;
   font-size: 1rem;
   transition: transform 0.4s ease;
 }
 
 button:hover {
-  background-color: #F15B3F;
+  background-color: #FFD371;
   transform: scale(1.1);
 }
 
 .redirect a {
   text-decoration: underline;
-  color: #FEF7E6;
+  color: #FFD371;
   font-family: "Quicksand";
   padding-bottom: 25px;
+  transform: scale(1.1);
 }
 
 .redirect a:hover {
   padding: 1.2rem 2.2rem;
   transform: scale(1.05); /* Zoom de 5% */
   transition: transform 0.4s ease;
-  color: #F15B3F;
+  color: #FFD371;
+}
+
+.sendForm {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding-top: 45px;
 }
 
 .error {
-  color: red; /* couleur du texte en rouge */
-  font-size: 14px; /* taille de la police */
+  color: rgb(251, 251, 251); /* couleur du texte en rouge */
+  font-size: 15px; /* taille de la police */
   font-style: italic; /* style de police italique */
+  font-family: "Quicksand";
   margin-top: 5px; /* espace en haut du paragraphe */
+  height: 0px;
 }
 
 .return {
