@@ -19,7 +19,6 @@ body {
     background-color: $main-color;
     border-radius: 20px;
     width: 95vw;
-    height: 95vh;
     display: flex;
     flex-direction: column;
     box-shadow: 0px 2px 10px 1px rgba(0, 0, 0, 0.34) inset;
@@ -83,7 +82,7 @@ li {
 
 .img {
     height: 300px; /* Définit la hauteur */
-    width: 200px;
+    width: 400px;
     object-fit: cover; /* Pour conserver les proportions de l'image */
     border-radius: 20px;
     border: 1px solid $background-color;
@@ -101,6 +100,8 @@ li {
 .show-all-recipes {
     display: flex;
     flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
 }
 
 h3 {
@@ -111,6 +112,14 @@ h3 {
     margin-top: 0;
     margin-bottom:0;
     padding-bottom: 3px;
+}
+
+.images-container-recipes {
+
+padding: 0;
+    ul {
+        padding: 0;
+    }
 }
 
 
@@ -178,3 +187,14 @@ h3 {
   .card .Post:hover svg {
     fill: #e4e4e4;
   }
+  
+
+.vignet {
+    display: flex;
+    background-color: $background-color;
+    border-radius: 20px;
+    color: black;
+    border: $background-color;
+    padding: 7px;
+
+}

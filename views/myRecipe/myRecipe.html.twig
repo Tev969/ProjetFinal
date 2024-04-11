@@ -3,30 +3,34 @@
 		<h1>Retrouver ici toutes
 			<span>vos</span>
 			recettes</h1>
-		
-<div class="card">
-  <a href="/addOneRecipe"><button class="button Post"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="svg">
-<path clip-rule="evenodd" d="M12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2ZM12 7C12.5523 7 13 7.44772 13 8V11H16C16.5523 11 17 11.4477 17 12C17 12.5523 16.5523 13 16 13H13V16C13 16.5523 12.5523 17 12 17C11.4477 17 11 16.5523 11 16V13H8C7.44772 13 7 12.5523 7 12C7 11.4477 7.44772 11 8 11H11V8C11 7.44772 11.4477 7 12 7Z"></path>
-</svg>Post</button></a>
-	</div>
+
+		<div class="card">
+			<a href="/addOneRecipe">
+				<button class="button Post">
+					<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="svg">
+						<path clip-rule="evenodd" d="M12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2ZM12 7C12.5523 7 13 7.44772 13 8V11H16C16.5523 11 17 11.4477 17 12C17 12.5523 16.5523 13 16 13H13V16C13 16.5523 12.5523 17 12 17C11.4477 17 11 16.5523 11 16V13H8C7.44772 13 7 12.5523 7 12C7 11.4477 7.44772 11 8 11H11V8C11 7.44772 11.4477 7 12 7Z"></path>
+					</svg>Post</button>
+			</a>
+		</div>
 	</div>
 	<a class="return" href="/MainPage"><img class="returnImg" src="/images/back.png" alt=""></a>
 
-<div class="show-all-recipes">
-	{% for recipes in user.recipeCollection %}
-		
+	<div class="show-all-recipes">
+		{% for recipes in user.recipeCollection %}
+        <div class="vignet">
+
 			<ul class="images-container-recipes">
 
 				<li>
 					<a href="/recipeDetail/{{recipes.id }}"><img class="img" src="/images/uploads/{{recipes.image }}" alt="recipes"></a>
 					<h3>{{recipes.recipeTitle }}</h3>
-                        <a href="/deleteRecipe/{{recipes.id }}"><img class="deleteRecipe" src="/images/supprimer.png" alt=""></a>
-                        <a href="/updateRecipe/{{recipes.id }}"><img class="updateRecipe" src="/images/modifier.png" alt=""></a>
+					<a href="/deleteRecipe/{{recipes.id }}"><img class="deleteRecipe" src="/images/supprimer.png" alt=""></a>
+					<a href="/updateRecipe/{{recipes.id }}"><img class="updateRecipe" src="/images/modifier.png" alt=""></a>
 				</li>
 
 			</ul>
-		
-	{% endfor %}
-</div>
+        </div>
+		{% endfor %}
+	</div>
 
 </section>

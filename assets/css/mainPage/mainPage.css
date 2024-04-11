@@ -24,8 +24,8 @@ body {
 }
 
 .button-model, .addRecipe, .logout, .signup, .login {
-  padding: 5px 35px 25px 35px;
-  height: 42px;
+  padding: 10px 35px 25px 35px;
+  height: 50px;
   color: black;
   text-align: center;
   text-decoration: none;
@@ -69,7 +69,7 @@ body {
 }
 
 .login-signup {
-  padding-top: 30px;
+  padding-top: 25px;
   display: flex;
   gap: 23px;
 }
