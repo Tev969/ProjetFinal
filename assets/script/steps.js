@@ -1,19 +1,37 @@
 document.addEventListener("DOMContentLoaded", function () {
   const addStepButton = document.getElementById("add-step-button");
   const stepsList = document.getElementById("steps-list");
+  let add = 0;
+  let remove = 0;
 
   addStepButton.addEventListener("click", function () {
     const textArea = document.createElement("textarea");
     textArea.name = "steps";
     textArea.id = "steps";
-    const btn = document.createElement("button");
-    btn.innerText = "-";
-    stepsList.appendChild(btn);
     textArea.classList.add("form-input", "stepsInput");
-    stepsList.appendChild(textArea);
+
+    const btn = document.createElement("button");
+    add++;
+    console.log(add);
+    btn.innerText = "-";
+    btn.type = "button";
+
+    const divContainer = document.createElement("div");
+    divContainer.appendChild(textArea);
+    divContainer.appendChild(btn);
+    stepsList.appendChild(divContainer);
+
+    const removeElement = (event) => {
+      let mydiv = event.target.parentElement;
+      if (mydiv) {
+        mydiv.remove();
+        remove--;
+      }
+    };
+
+    btn.addEventListener("click", removeElement);
   });
 });
-
 
 document.addEventListener("DOMContentLoaded", function () {
   const addIngredientButton = document.getElementById("add-ingredient-button");
@@ -40,12 +58,22 @@ document.addEventListener("DOMContentLoaded", function () {
     ingredientGroup.appendChild(ingredientTextarea);
     ingredientGroup.appendChild(quantityInput);
 
+    const removeBtn = document.createElement("button")
+    removeBtn.type = "button"
+    removeBtn.innerText = "-"
+
+    const removeIngredient = (event) => {
+        const parentDiv = event.target.parentElement;
+        if (parentDiv) {
+            parentDiv.remove();
+        }
+    }
+    
+    removeBtn.addEventListener('click' , removeIngredient)
+
+
+    ingredientGroup.appendChild(removeBtn)
     ingredientsList.appendChild(ingredientGroup);
     ingredientCount++;
   });
 });
-
-// ajouter les champs exactement pareil que steps / mais 2 champs a la fois /
-// ingredient quantity
-
-// en back je recois 2 liste d'objets , avant de transformer ca en model , la combiner en 1 seule d'objets
