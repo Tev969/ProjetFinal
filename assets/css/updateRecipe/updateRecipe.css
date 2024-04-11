@@ -4,64 +4,70 @@ body {
   margin: 0;
   display: flex;
   justify-content: center;
-  width: 100%;
-  height: 100%;
+  align-items: center;
+  height: 100vh;
+  padding-top: 60px;
 }
 
 .add-recipe-container {
-  padding: 30px 30px 30px 30px;
-  justify-content: center;
+  margin-top: 5rem;
+  margin-bottom: 3rem;
+  height: 100vh;
 }
 
 .add-recipe-title {
-  font-size: 2rem;
+  font-size: 2.5rem; /* Légère augmentation de la taille du titre */
   font-family: "Quicksand";
-  letter-spacing: 5px;
-  color: #FEF7E6;
+  letter-spacing: 2px; /* Réduction de l'espacement entre les lettres */
+  color: #FEF7E6; /* Changement de couleur pour une meilleure visibilité */
+  text-align: center;
+  margin-bottom: 20px; /* Espacement en bas du titre */
 }
 
 .add-recipe-form {
-  margin-left: 45px;
-  margin-right: 45px;
+  margin: 0 auto; /* Centrer horizontalement */
   background-color: #F15B3F;
   border-radius: 20px;
   width: 75vw;
-  display: flex;
-  flex-direction: column;
+  max-width: 600px; /* Limiter la largeur pour une meilleure lisibilité */
   padding: 2rem;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1); /* Ajout d'une légère ombre */
 }
 
 .form-group {
-  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem; /* Augmentation de l'espacement entre les groupes */
 }
 
 .form-label {
   font-size: 1.2rem;
   color: #FEF7E6;
   font-family: "Quicksand";
+  margin-bottom: 0.7rem; /* Augmentation de l'espacement en bas du label */
 }
 
 .form-input {
-  width: 100%;
-  padding: 0.5rem;
-  font-size: 1rem;
-  border-radius: 5px;
+  width: 80%;
+  padding: 1rem; /* Augmentation du padding */
+  font-size: 1.1rem; /* Légère augmentation de la taille de la police */
+  border-radius: 8px; /* Arrondi plus prononcé */
   border: 1px solid #FEF7E6;
   background-color: #F15B3F;
   color: #FEF7E6;
+  outline: none;
 }
 
 .form-input:focus {
-  outline: none;
-  border-color: #FEF7E6;
+  border-color: #F15B3F; /* Changement de couleur au focus */
 }
 
 .add-recipe-button {
   width: 50%;
   margin: 0 auto;
-  padding: 0.7rem;
+  padding: 1rem;
   font-size: 1.2rem;
-  border-radius: 5px;
+  border-radius: 8px;
   border: none;
   background-color: #F15B3F;
   color: #FEF7E6;
@@ -70,122 +76,127 @@ body {
 }
 
 .add-recipe-button:hover {
-  background-color: #bc290e;
+  background-color: #ec3411; /* Assombrissement moins prononcé */
 }
 
-.form-label-ingredients,
-.form-label-steps {
-  font-size: 1.2rem;
-  color: #FEF7E6;
-  font-family: "Quicksand";
-}
-
-.form-input-textarea {
-  width: 100%;
-  padding: 0.5rem;
-  font-size: 1rem;
-  border-radius: 5px;
-  border: 1px solid #FEF7E6;
-  background-color: #F15B3F;
-  color: #FEF7E6;
-  resize: vertical; /* Permet le redimensionnement vertical uniquement */
-}
-
-.form-input-textarea:focus {
-  outline: none;
-  border-color: #F15B3F;
-}
-
-#price {
-  width: 100%;
-  padding: 0.5rem;
-  font-size: 1rem;
-  border-radius: 5px;
-  border: 1px solid #FEF7E6;
-  background-color: #F15B3F;
-  color: #FEF7E6;
-}
-
-#price:focus {
-  outline: none;
-  border-color: #F15B3F;
-}
-
-.form-label-duration {
-  font-size: 1.2rem;
-  color: #FEF7E6;
-  font-family: "Quicksand";
-}
-
-/* Styles pour le champ de durée */
-#duration {
-  width: 100%;
-  padding: 0.5rem;
-  font-size: 1rem;
-  border-radius: 5px;
-  border: 1px solid #FEF7E6;
-  background-color: #F15B3F;
-  color: #FEF7E6;
-}
-
-#duration:focus {
-  outline: none;
-  border-color: #F15B3F;
-}
-
-.add-ingredient-button,
-.add-step-button {
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
-  border: 2px solid #FEF7E6;
-  border-radius: 5px;
-  background-color: transparent;
-  font-family: "Quicksand";
-  color: #FEF7E6;
-  cursor: pointer;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.add-ingredient-button:hover,
-.add-step-button:hover {
-  background-color: #F15B3F;
-  color: #fff;
-}
-
-.add-ingredient-button::-moz-placeholder, .add-step-button::-moz-placeholder {
-  color: white;
-}
-
-.add-ingredient-button::placeholder,
-.add-step-button::placeholder {
-  color: white;
-}
-
-#steps {
-  width: 100%;
-  padding: 0.5rem;
-  font-size: 1rem;
-  border-radius: 5px;
-  border: 1px solid #FEF7E6;
-  background-color: #F15B3F;
-  color: #FEF7E6;
-  resize: vertical; /* Permet le redimensionnement vertical uniquement */
-}
-#steps #steps:focus {
-  outline: none;
-  border-color: #F15B3F;
-}
-
-.return {
-  display: flex;
-  justify-content: center;
-}
-.return img {
-  width: 5%;
-  height: 5%;
+.returnImg {
+  width: 30px;
+  height: 30px;
   transition: transform 0.3s ease;
 }
 
 .returnImg:hover {
-  transform: scale(1.2);
+  transform: scale(1.1); /* Réduction de l'agrandissement au survol */
+}
+
+.form-control {
+  position: relative;
+  margin-bottom: 40px; /* Espacement plus important en bas */
+}
+
+.form-control input {
+  background-color: transparent;
+  border: 0;
+  border-bottom: 2px solid #fff;
+  display: block;
+  width: 100%;
+  padding: 15px 0;
+  font-size: 1.1rem;
+  color: #fff;
+  outline: none;
+  transition: border-color 0.3s ease; /* Transition pour la couleur de la bordure */
+}
+
+.form-control input:focus,
+.form-control input:valid {
+  outline: 0;
+  border-bottom-color: lightblue; /* Couleur de bordure au focus ou quand valide */
+}
+
+.form-control label {
+  position: absolute;
+  top: 15px;
+  left: 0;
+  pointer-events: none;
+  transition: top 0.3s ease, color 0.3s ease; /* Transition pour la couleur et la position */
+}
+
+.form-control label span {
+  display: inline-block;
+  font-size: 1.1rem;
+  min-width: 5px;
+  color: #fff;
+  transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.form-control input:focus + label span,
+.form-control input:valid + label span {
+  color: lightblue;
+  transform: translateY(-30px);
+  top: 0;
+}
+
+/* Style pour le champ d'entrée de la photo */
+.photo-input-wrapper {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.choose-photo-button {
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  border: none;
+  background-color: #F15B3F;
+  color: #FEF7E6;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.choose-photo-button:hover {
+  background-color: #f4846f;
+}
+
+/* Style pour le champ d'entrée des ingrédients */
+.ingredient-input {
+  width: calc(100% - 150px); /* Largeur ajustée */
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+.add-ingredient-button {
+  padding: 0.7rem 1rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: none;
+  background-color: #F15B3F;
+  color: #FEF7E6;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-ingredient-button:hover {
+  background-color: #f4846f;
+}
+
+/* Style pour le champ d'entrée des étapes */
+.step-input {
+  width: calc(100% - 150px); /* Largeur ajustée */
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+.add-step-button {
+  padding: 0.7rem 1rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: none;
+  background-color: #F15B3F;
+  color: #FEF7E6;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-step-button:hover {
+  background-color: #f4846f;
 }/*# sourceMappingURL=updateRecipe.css.map */

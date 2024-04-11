@@ -116,7 +116,7 @@ h3 {
     text-wrap: nowrap;
     margin-top: 0;
     margin-bottom:0;
-    padding-bottom: 3px;
+    padding-bottom: 10px;
 }
 
 .images-container-recipes {
@@ -214,7 +214,7 @@ button {
     align-items: center;
     padding: 1em;
     border: 0px solid transparent;
-    background-color: rgba(100,77,237,0.08);
+    background-color: rgba(26, 200, 84, 0.08);
     border-radius: 1.25em;
     transition: all 0.2s linear;
    }
@@ -230,6 +230,7 @@ button {
    .tooltip {
     position: relative;
     display: inline-block;
+    background-color: $three-color;
    }
    
    .tooltip .tooltiptext {
@@ -282,6 +283,7 @@ button {
    }
    
    .tooltip {
+    background-color: $three-color;
     position: relative;
     display: inline-block;
     margin-right: 8px;

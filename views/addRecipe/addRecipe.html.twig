@@ -1,22 +1,30 @@
-
 <div class="add-recipe-container">
 
-	<h2 class="add-recipe-title">Ajouter une recette ici.</h2>
 	<form class="add-recipe-form" action="/addOneRecipe" method="POST" enctype="multipart/form-data">
-        <a class="return"  href="/addRecipe"><img  class="returnImg" src="/images/back.png" alt=""></a>
+		<h2 class="add-recipe-title">Ajouter une recette ici.</h2>
+		<a class="return" href="/addRecipe"><img class="returnImg" src="/images/back.png" alt=""></a>
 		<div class="form-group">
 			<label for="image" class="form-label">Photo de la recette :</label>
 			<input type="file" id="photo" name="image" class="form-input">
 		</div>
+
 		<div class="form-group">
-			<label for="recipeTitle" class="form-label">Titre de votre recette :</label>
-			<textarea id="name" name="recipeTitle" rows="1" class="form-input" required></textarea>
+			<div class="form-control">
+				<input type="text" required="true" name="recipeTitle">
+				<label>
+					<span style="transition-delay:0ms">T</span>
+					<span style="transition-delay:50ms">i</span>
+					<span style="transition-delay:100ms">t</span>
+					<span style="transition-delay:150ms">r</span>
+					<span style="transition-delay:200ms">e</span>
+				</label>
+			</div>
 		</div>
 		<div class="form-group">
 			<label for="duration" class="form-label">Durée de la recette :</label>
 			<select id="duration" name="duration" class="form-input" required>
-				<option value="-1">Moins de 1 heure </option>
-				<option value="+1">Plus de 1 heure  </option>
+				<option value="-1">Moins de 1 heure</option>
+				<option value="+1">Plus de 1 heure</option>
 			</select>
 		</div>
 		<div class="form-group">
@@ -37,7 +45,7 @@
 		</div>
 
 		<div class="form-group">
-			<label class="form-label">Ingredients :</label>
+			<label class="form-label">Ingrédients :</label>
 			<ul id="ingredient-list"></ul>
 			<button type="button" id="add-ingredient-button" class="add-ingredient-button">Ajouter un ingrédient +</button>
 		</div>
