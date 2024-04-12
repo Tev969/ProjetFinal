@@ -36,7 +36,7 @@ const recipesSchema = new mongoose.Schema({
 
   price: {
     type: String,
-    required: [true , "prixde recettes requis"],
+    required: [true , "prix de recettes requis"],
 },
 
     steps: {

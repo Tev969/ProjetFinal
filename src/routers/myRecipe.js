@@ -87,8 +87,8 @@ myRecipeRouter.get("/updateRecipe/:recipeid", authguard, async (req, res) => {
   }
 });
 
-
-myRecipeRouter.post("/update/:recipeid",
+myRecipeRouter.post(
+  "/update/:recipeid",
   authguard,
   upload.single("image"),
   async (req, res) => {
@@ -99,12 +99,31 @@ myRecipeRouter.post("/update/:recipeid",
       await recipesModel.updateOne({ _id: req.params.recipeid }, req.body);
       res.redirect("/addRecipe");
     } catch (error) {
-        console.log(error);
+      console.log(error);
       res.render("MainPage/index.html.twig", {
         errorDelete: "Probleme survenue ",
       });
     }
   }
 );
+
+myRecipeRouter.get("/search", (req, res) => {
+  const query = req.query.query;
+  recipesModel.find(
+    {
+      recipeTitle: { $regex: query, $options: "i" },
+    },
+    (err, recipes) => {
+      if (err) {
+        console.log(err);
+        return res.status(500).json({
+          error: "Une erreur s'est produite lors de la recherche des recettes.",
+        });
+      }
+      //
+      res.json(recipes);
+    }
+  );
+});
 
 module.exports = myRecipeRouter;
