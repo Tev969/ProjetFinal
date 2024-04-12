@@ -186,6 +186,7 @@ body {
   flex-direction: column;
   border: 2px solid black;
   border-bottom: 4px solid black;
+  border-left: 4px solid black;
 }
 
 .h2-container {
@@ -213,6 +214,7 @@ body {
   display: flex;
   padding: 0;
   gap: 1.5rem;
+  margin: 10px 0px 50px 0px;
   position: relative;
   justify-content: center;
 }
@@ -223,9 +225,8 @@ body {
 .images-container-recipes h3 {
   font-size: 1.3rem;
   font-family: "Quicksand";
-  color: #FEF7E6;
-  margin-top: 15px;
-  margin-bottom: 30px;
+  color: black;
+  margin-top: 5px;
   padding-left: 5px;
 }
 
@@ -241,14 +242,43 @@ body {
   position: relative;
 }
 
+.images-container-recipes li img:hover {
+  transform: scale(1.04);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.foot-page {
+  margin-top: 35px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.vignet {
+  display: grid; /* Utilisez une disposition de type grille */
+  grid-template-columns: auto 1fr; /* Colonne automatique pour le contenu à gauche, 1fr pour le contenu à droite */
+  align-items: center; /* Centrez les éléments verticalement */
+  background-color: #FEF7E6;
+  border-radius: 20px;
+  color: black;
+  border: #FEF7E6;
+  padding: 7px 7px 5px 7px;
+  border-bottom: 4px solid black;
+  position: relative; /* Ajoutez une position relative pour positionner la .like à l'intérieur de .vignet */
+}
+
 .like {
   cursor: pointer;
   height: 100px;
   width: 100px;
   background-image: url(http://abs.twimg.com/a/1446542199/img/t1/web_heart_animation.png);
   position: absolute;
-  top: 98%;
-  transform: translate(-27%, -50%);
+  bottom: 35px;
+  right: -70px;
+  transform: translate(-50%, 50%);
+}
+
+.vignet h3 {
+  padding-top: 8px;
 }
 
 .anim-like {
@@ -265,17 +295,6 @@ body {
     background-position: right;
   }
 }
-.images-container-recipes li img:hover {
-  transform: scale(1.1);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-}
-
-.foot-page {
-  margin-top: 35px;
-  display: flex;
-  justify-content: space-between;
-}
-
 .container-day {
   background-color: #FFD371;
   padding: 0;
