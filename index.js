@@ -10,6 +10,7 @@ const recipeDetailsRouter = require("./src/routers/recipeDetails");
 const subscribeRouter = require("./src/routers/subscribeRouter");
 const loginRouter = require("./src/routers/login");
 const myRecipeRouter = require("./src/routers/myRecipe");
+const favorisRouter = require('./src/routers/favorite')
 require("dotenv").config();
 
 const app = express();
@@ -27,8 +28,8 @@ app.use(allRecipesRouter);
 app.use(recipeDetailsRouter);
 app.use(subscribeRouter);
 app.use(loginRouter);
-app.use(myRecipeRouter)
-
+app.use(myRecipeRouter);
+app.use(favorisRouter)
 app.listen(parseInt(process.env.PORT), (err) => {
   if (err) {
     console.log(err);
