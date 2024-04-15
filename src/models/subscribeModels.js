@@ -44,6 +44,13 @@ const subscribeSchema = new mongoose.Schema({
       ref: "recipes",
     },
   ],
+
+  favoriteCollection: [
+    {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "favoris",
+    }
+  ]
 });
 
 subscribeSchema.pre("validate", async function (next) {
