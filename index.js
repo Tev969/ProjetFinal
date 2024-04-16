@@ -13,6 +13,7 @@ const myRecipeRouter = require("./src/routers/myRecipe");
 const favorisRouter = require('./src/routers/favorite')
 require("dotenv").config();
 
+
 const app = express();
 app.use(express.static("./assets"));
 app.use(express.urlencoded({ extended: true }));
@@ -23,6 +24,8 @@ app.use(
     saveUninitialized: true,
   })
 );
+
+
 app.use(mainPageRouter);
 app.use(allRecipesRouter);
 app.use(recipeDetailsRouter);

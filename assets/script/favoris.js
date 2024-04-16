@@ -1,23 +1,16 @@
-let inputs = document.querySelectorAll("input:has(+div.like)");
-
-inputs.forEach((input) => {
-  console.log("cookie");
-  input.addEventListener("click", () => {
-
-    if (input.checked) {
-      console.log(input.id);
-
-    } else {
-      console.log(input.id);
-    }
-  });
+document.querySelectorAll("input:has(+div.like)").forEach((input) => {
+  input.addEventListener("click", favorite);
 });
 
+async function favorite(mouseevent) {
+  const input = mouseevent.target;
 
+  const baseUrl = "http://localhost:3003";
 
-async function favorite()
- {
-  const reponse = await fetch("http://localhost:3003/favorite.js");
-  const favoris = await reponse.json();
-  console.log(favoris);
+  if (input.checked) {
+    await fetch(baseUrl + "/addfavorite/" + input.id);
+
+  } else {
+    await fetch(baseUrl + "/removefavorite/" + input.id);
+  }
 }

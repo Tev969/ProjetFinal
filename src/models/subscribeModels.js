@@ -45,7 +45,7 @@ const subscribeSchema = new mongoose.Schema({
     },
   ],
 
-  favoriteCollection: [
+  favorites: [
     {
         type: mongoose.Schema.Types.ObjectId,
         ref: "favoris",
