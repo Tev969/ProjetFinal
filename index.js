@@ -3,7 +3,8 @@ const twig = require("twig");
 const express = require("express");
 const session = require("express-session");
 const mongoose = require("mongoose");
-const axios = require("axios")
+const axios = require("axios");
+
 const mainPageRouter = require("./src/routers/mainPage");
 const allRecipesRouter = require("./src/routers/allRecipes");
 const recipeDetailsRouter = require("./src/routers/recipeDetails");
@@ -11,8 +12,8 @@ const subscribeRouter = require("./src/routers/subscribeRouter");
 const loginRouter = require("./src/routers/login");
 const myRecipeRouter = require("./src/routers/myRecipe");
 const favorisRouter = require('./src/routers/favorite')
-require("dotenv").config();
 
+require("dotenv").config();
 
 const app = express();
 app.use(express.static("./assets"));
@@ -32,7 +33,8 @@ app.use(recipeDetailsRouter);
 app.use(subscribeRouter);
 app.use(loginRouter);
 app.use(myRecipeRouter);
-app.use(favorisRouter)
+app.use(favorisRouter);
+
 app.listen(parseInt(process.env.PORT), (err) => {
   if (err) {
     console.log(err);
@@ -42,8 +44,8 @@ app.listen(parseInt(process.env.PORT), (err) => {
 });
 
 try {
-  mongoose.connect(process.env.URLBDD);
-  console.log("connecter a la bdd");
+    mongoose.connect(process.env.URLBDD);
+    console.log("Connexion réussie à la BDD.");
 } catch (error) {
   console.log(error);
 }

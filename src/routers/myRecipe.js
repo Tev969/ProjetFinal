@@ -8,6 +8,8 @@ const authguard = require("../../services/authguard");
 const multer = require("../../services/multer-config");
 const upload = require("../../services/multer-config");
 
+
+
 myRecipeRouter.get("/addRecipe", async (req, res) => {
   res.render("myRecipe/index.html.twig", {
     user: await subscribeModel
@@ -15,6 +17,7 @@ myRecipeRouter.get("/addRecipe", async (req, res) => {
       .populate("recipeCollection"),
   });
 });
+
 
 myRecipeRouter.get("/addOneRecipe", async (req, res) => {
   res.render("addRecipe/index.html.twig", {
@@ -29,7 +32,6 @@ myRecipeRouter.post(
   multer.single("image"),
   async (req, res) => {
     try {
-      console.log(JSON.stringify(req.body));
       let recipe = new recipesModel(req.body);
       if (req.file) {
         if (req.multerError) {
@@ -37,12 +39,12 @@ myRecipeRouter.post(
         }
         recipe.image = req.file.filename;
       }
+
       recipe._user = req.session.user._id;
       recipe.validateSync();
       console.log(await recipe.save());
       res.redirect("/addRecipe");
     } catch (error) {
-      console.log(req.session);
       console.log(error);
       res.render("myRecipe/index.html.twig", {
         user: await subscribeModel
