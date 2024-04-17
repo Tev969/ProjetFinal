@@ -8,8 +8,6 @@ const authguard = require("../../services/authguard");
 const multer = require("../../services/multer-config");
 const upload = require("../../services/multer-config");
 
-
-
 myRecipeRouter.get("/addRecipe", async (req, res) => {
   res.render("myRecipe/index.html.twig", {
     user: await subscribeModel
@@ -18,13 +16,11 @@ myRecipeRouter.get("/addRecipe", async (req, res) => {
   });
 });
 
-
 myRecipeRouter.get("/addOneRecipe", async (req, res) => {
   res.render("addRecipe/index.html.twig", {
     user: await subscribeModel.findById(req.session.user._id),
   });
 });
-
 
 myRecipeRouter.post(
   "/addOneRecipe",
@@ -56,7 +52,6 @@ myRecipeRouter.post(
   }
 );
 
-
 myRecipeRouter.get("/deleteRecipe/:recipeid", authguard, async (req, res) => {
   try {
     await recipesModel.deleteOne({ _id: req.params.recipeid });
@@ -86,7 +81,7 @@ myRecipeRouter.get("/updateRecipe/:recipeid", authguard, async (req, res) => {
         .findById(req.session.user._id)
         .populate("recipeCollection"),
       errorMessage: "La recete que vous souhaitez modifier n'existe pas",
-      user: await recipesModel.findById(req.session.user._id),
+      //   user: await recipesModel.findById(req.session.user._id),
     });
   }
 });

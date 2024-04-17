@@ -5,49 +5,20 @@ const subscribeModel = require("../models/subscribeModels");
 const mongoose = require("mongoose");
 const authguard = require("../../services/authguard");
 
-favorisRouter.get("/addfavorite/:recipeid", authguard ,  async  (req,res)=> {
-    let user = await subscribeModel.findById(req.session.user._id)
-    let id = (req.params.recipeid) 
-console.log(req.session);
-    user.updateOne(
-    {
-        $addToSet: { favorites: id }
-    }
-    )
+favorisRouter.get("/addfavorite/:recipeid", authguard, async (req, res) => {
+  let user = await subscribeModel.findById(req.session.user._id);
+  let id = req.params.recipeid;
+
+  try {
+   await user.updateOne({
+        $addToSet: { favorites: [id] },
+      });
+  } catch (error) {
+   console.log(error);
+   res.status(500).send(error)
+  }
+  console.log(req.session);
+ 
 });
 
-
-
-
-
 module.exports = favorisRouter;
-
-
-
-
-
-
-
-
-
-
-const data = {
-    "name": "Chris",
-    "age": 23,
-    "address": {
-      "city": "New York",
-      "country": "America"
-    },
-    "friends": [
-      {
-        "name": "Emily",
-        "hobbies": [ "biking", "music", "gaming" ]
-      },
-      {
-        "name": "John",
-        "hobbies": [ "soccer", "gaming" ]
-      }
-    ]
-  }
-  
-  console.log(/* ... */);
