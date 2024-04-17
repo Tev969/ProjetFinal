@@ -6,8 +6,9 @@ mainPageRouter.get("/MainPage", async (req, res) => {
   try {
     const recipes = await recipesModel.find().limit(5);
     res.render("MainPage/index.html.twig", {
+      
       user: req.session.user,
-      recipes : recipes
+      recipes : recipes,
     });
   } catch (error) {
     console.log(error);

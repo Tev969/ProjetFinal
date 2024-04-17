@@ -9,7 +9,6 @@ async function favorite(mouseevent) {
 
   if (input.checked) {
     await fetch(baseUrl + "/addfavorite/" + input.id);
-
   } else {
     await fetch(baseUrl + "/removefavorite/" + input.id);
   }

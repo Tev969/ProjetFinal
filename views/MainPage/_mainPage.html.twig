@@ -47,10 +47,17 @@
 			<div class="vignet">
 				<li>
 
+
 					<a href="/recipeDetail/{{recipes[i].id }}"><img class="img-carrousel" src="/images/uploads/{{recipes[i].image}}" alt="recipes"></a>
 					<label class="ui-like">
-						<input id="{{recipes[i].id}}" type="checkbox">
+						{% if  recipes[i].id in user.favorites  %}
 
+							<input id="{{recipes[i].id}}" type="checkbox" checked>
+
+						{% else %}
+
+							<input id="{{recipes[i].id}}" type="checkbox">
+						{% endif %}
 						<div class="like">
 							<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" fill="">
 								<g stroke-width="0" id="SVGRepo_bgCarrier"></g>

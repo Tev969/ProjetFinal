@@ -12,9 +12,10 @@ myRecipeRouter.get("/addRecipe", async (req, res) => {
   res.render("myRecipe/index.html.twig", {
     user: await subscribeModel
       .findById(req.session.user._id)
-      .populate("recipeCollection"),
+      .populate("recipeCollection")
   });
 });
+// changer nom route
 
 myRecipeRouter.get("/addOneRecipe", async (req, res) => {
   res.render("addRecipe/index.html.twig", {

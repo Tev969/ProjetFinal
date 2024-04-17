@@ -1,7 +1,11 @@
 {% extends "../base.html.twig" %}
+
+{% block script %}
+	<script defer src="/script/steps.js"></script>
+{% endblock %}
 {% block style %}
-<link rel="stylesheet" href="/css/addRecipe/addRecipe.css">
+	<link rel="stylesheet" href="/css/addRecipe/addRecipe.css">
 {% endblock %}
 {% block main %}
-{% include "addRecipe/addRecipe.html.twig" %}
+	{% include "addRecipe/addRecipe.html.twig" %}
 {% endblock %}

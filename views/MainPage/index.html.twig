@@ -1,8 +1,16 @@
 {% extends "../base.html.twig" %}
+
+
 {% block style %}
 	<link rel="stylesheet" href="/css/mainPage/mainPage.css">
 {% endblock %}
 
+
 {% block main %}
 	{% include "MainPage/_mainPage.html.twig" %}
+{% endblock %}
+
+
+{% block script %}
+	<script defer src="/script/favoris.js"></script>
 {% endblock %}
