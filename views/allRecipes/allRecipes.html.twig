@@ -15,9 +15,7 @@
 	<div class="show-all-recipes">
 		<ul class="images-container-recipes">
 			{% for recipe in recipes %}
-            <pre>
-                {{ dump(user) }}
-            </pre>
+    
 				<div class="vignet">
 					<li>
 						<a href="/recipeDetail/{{recipe.id }}"><img src="/images/uploads/{{recipe.image}}" alt="recipes"></a>
