@@ -273,8 +273,13 @@ body {
   padding-top: 8px;
 }
 
+.fav {
+  display: flex;
+  justify-content: space-between;
+}
+
 .ui-like {
-  --icon-size: 24px;
+  --icon-size: 34px;
   --icon-secondary-color: rgb(67, 66, 66);
   --icon-hover-color: rgb(211, 205, 205);
   --icon-primary-color: rgb(230, 26, 26);
@@ -291,11 +296,12 @@ body {
 }
 
 .ui-like .like {
+  margin-top: 10px;
   width: var(--icon-size);
   height: auto;
   fill: var(--icon-secondary-color);
   cursor: pointer;
-  transition: 0.2s;
+  transition: 0.5s;
   display: flex;
   justify-content: center;
   align-items: center;

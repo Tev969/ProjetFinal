@@ -49,28 +49,33 @@
 
 
 					<a href="/recipeDetail/{{recipes[i].id }}"><img class="img-carrousel" src="/images/uploads/{{recipes[i].image}}" alt="recipes"></a>
-					<label class="ui-like">
-						{% if  recipes[i].id in user.favorites  %}
+					<div class="fav">
+						<h3>{{recipes[i].recipeTitle }}</h3>
+                        
+						{% if user %}
 
-							<input id="{{recipes[i].id}}" type="checkbox" checked>
+							<label class="ui-like">
+								{% if  recipes[i].id in user.favorites  %}
 
-						{% else %}
+									<input id="{{recipes[i].id}}" type="checkbox" checked>
 
-							<input id="{{recipes[i].id}}" type="checkbox">
-						{% endif %}
-						<div class="like">
-							<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" fill="">
-								<g stroke-width="0" id="SVGRepo_bgCarrier"></g>
-								<g stroke-linejoin="round" stroke-linecap="round" id="SVGRepo_tracerCarrier"></g>
-								<g id="SVGRepo_iconCarrier">
-									<path d="M20.808,11.079C19.829,16.132,12,20.5,12,20.5s-7.829-4.368-8.808-9.421C2.227,6.1,5.066,3.5,8,3.5a4.444,4.444,0,0,1,4,2,4.444,4.444,0,0,1,4-2C18.934,3.5,21.773,6.1,20.808,11.079Z"></path>
-								</g>
-							</svg>
+								{% else %}
+
+									<input id="{{recipes[i].id}}" type="checkbox">
+								{% endif %}
+
+								<div class="like">
+									<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" fill="">
+										<g stroke-width="0" id="SVGRepo_bgCarrier"></g>
+										<g stroke-linejoin="round" stroke-linecap="round" id="SVGRepo_tracerCarrier"></g>
+										<g id="SVGRepo_iconCarrier">
+											<path d="M20.808,11.079C19.829,16.132,12,20.5,12,20.5s-7.829-4.368-8.808-9.421C2.227,6.1,5.066,3.5,8,3.5a4.444,4.444,0,0,1,4,2,4.444,4.444,0,0,1,4-2C18.934,3.5,21.773,6.1,20.808,11.079Z"></path>
+										</g>
+									</svg>
+								</div>
+							</label>
 						</div>
-					</label>
-
-
-					<h3>{{recipes[i].recipeTitle }}</h3>
+					{% endif %}
 
 
 				</li>
@@ -84,7 +89,7 @@
 
 	<div class="container-day">
 		<div class="day-recipe">
-			<h2 class="day-recipe-title">Nos recettes du jour</h2>
+			<h2 class="day-recipe-title">Nos recettes du moment</h2>
 		</div>
 		<ul class="images-container-day">
 
