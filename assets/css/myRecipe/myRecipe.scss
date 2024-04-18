@@ -152,8 +152,6 @@ gap: 45px;
   .button {
     border: none;
     border-radius: 10px;
-    box-shadow: inset 5px 5px 5px #c4c4c4,
-                inset -5px -5px 5px #ffffff;
     color: #333;
     cursor: pointer;
     display: flex;
@@ -166,6 +164,10 @@ gap: 45px;
     margin: 3px;
     padding: 10px;
     text-transform: uppercase;
+
+    a {
+        list-style: none;
+    }
   }
   
   .button:hover {
@@ -180,20 +182,20 @@ gap: 45px;
   
   
   .card .Post {
-    color: #333;
+    color: #ffffff;
   }
   
   .card .Post:hover {
-    background-color: #333;
-    color: #e4e4e4;
+    background-color: $three-color;
+    color: #000000;
   }
   
   .card .Post svg {
-    fill: #333;
+    fill: #ffffff;
   }
   
   .card .Post:hover svg {
-    fill: #e4e4e4;
+    fill: #010101;
   }
   
 

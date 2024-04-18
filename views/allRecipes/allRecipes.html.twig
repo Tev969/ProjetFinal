@@ -27,15 +27,15 @@
 							<div class="fav">
 							
 								{% if user %}
-
+                                         
 									<label class="ui-like">
-										{% if  recipes[i].id in user.favorites  %}
+										{% if  recipe.id in user.favorites  %}
 
-											<input id="{{recipes[i].id}}" type="checkbox" checked>
+											<input id="{{recipe.id}}" type="checkbox" checked>
 
 										{% else %}
 
-											<input id="{{recipes[i].id}}" type="checkbox">
+											<input id="{{recipe.id}}" type="checkbox">
 										{% endif %}
 
 										<div class="like">

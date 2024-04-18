@@ -149,7 +149,6 @@ h3 {
 .button {
   border: none;
   border-radius: 10px;
-  box-shadow: inset 5px 5px 5px #c4c4c4, inset -5px -5px 5px #ffffff;
   color: #333;
   cursor: pointer;
   display: flex;
@@ -163,6 +162,9 @@ h3 {
   padding: 10px;
   text-transform: uppercase;
 }
+.button a {
+  list-style: none;
+}
 
 .button:hover {
   box-shadow: none;
@@ -175,20 +177,20 @@ h3 {
 }
 
 .card .Post {
-  color: #333;
+  color: #ffffff;
 }
 
 .card .Post:hover {
-  background-color: #333;
-  color: #e4e4e4;
+  background-color: #FFD371;
+  color: #000000;
 }
 
 .card .Post svg {
-  fill: #333;
+  fill: #ffffff;
 }
 
 .card .Post:hover svg {
-  fill: #e4e4e4;
+  fill: #010101;
 }
 
 .vignet {

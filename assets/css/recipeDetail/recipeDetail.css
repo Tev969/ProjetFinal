@@ -95,8 +95,11 @@ body {
 }
 
 .steps {
+  overflow-y: scroll;
   padding-top: 5px;
   max-width: 600px;
+  margin-bottom: 15px;
+  height: 60vh;
 }
 .steps h3 {
   color: BLACK;
@@ -205,4 +208,17 @@ body {
   font-size: 1.2rem;
   color: transform scale(1.1) box-shadow 0 0 20px rgba(0, 0, 0, 0.5);
   line-height: 1.4;
+}
+
+.card__image-text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  color: #FEF7E6;
+  background-color: rgba(255, 255, 255, 0.429); /* couleur de fond semi-transparente */
+  width: 100%;
+  padding: 2px;
+  text-align: center;
+  font-size: 1.3rem;
+  font-family: "Quicksand";
 }/*# sourceMappingURL=recipeDetail.css.map */
