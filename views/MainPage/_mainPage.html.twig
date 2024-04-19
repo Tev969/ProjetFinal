@@ -43,25 +43,25 @@
 	</div>
 
 	<ul class="images-container-recipes">
-		{% for i in 0..3 %}
+		{% for recipe in recipes %}
 			<div class="vignet">
 				<li>
 
 
-					<a href="/recipeDetail/{{recipes[i].id }}"><img class="img-carrousel" src="/images/uploads/{{recipes[i].image}}" alt="recipes"></a>
+					<a href="/recipeDetail/{{recipe.id }}"><img class="img-carrousel" src="/images/uploads/{{recipe.image}}" alt="recipes"></a>
 					<div class="fav">
-						<h3>{{recipes[i].recipeTitle }}</h3>
+						<h3>{{recipe.recipeTitle }}</h3>
                         
 						{% if user %}
-
+                        
 							<label class="ui-like">
-								{% if  recipes[i].id in user.favorites  %}
+								{% if  recipe.id in user.favorites  %}
 
-									<input id="{{recipes[i].id}}" type="checkbox" checked>
+									<input id="{{recipe.id}}" type="checkbox" checked>
 
 								{% else %}
 
-									<input id="{{recipes[i].id}}" type="checkbox">
+									<input id="{{recipe.id}}" type="checkbox">
 								{% endif %}
 
 								<div class="like">
@@ -93,12 +93,12 @@
 		</div>
 		<ul class="images-container-day">
 
-			{% for i in 0..1 %}
+			{% for recipes in todayRecipes %}
 
 				<li>
-					<a href="/recipeDetail/{{recipes[i].id }}"><img class="day-img" src="/images/uploads/{{recipes[i].image}}" alt="recipes"></a>
+					<a href="/recipeDetail/{{recipes.id }}"><img class="day-img" src="/images/uploads/{{recipes.image}}" alt="recipes"></a>
 
-					<h3>{{recipes[i].recipeTitle }}</h3>
+					<h3>{{recipes.recipeTitle }}</h3>
 
 				</li>
 			{% endfor %}

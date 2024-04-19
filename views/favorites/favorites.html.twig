@@ -1,25 +1,24 @@
 <section class="all-recipes-container">
 
 	<div class="top-container">
-		<h1>Nos recettes</h1>
+		<h1>Vos favoris</h1>
 
 		<div class="search-recipe-container">
 			<form class"search-bar" action="/search" method="get">
 				<input type="search" id="searchRecipe" class="search-recipe" name="findRecipe" placeholder="Rechercher une recettes...">
 				<button class="find" type="submit">Rechercher</button>
-				<a class="return" href="/MainPage"><img class="returnImg" src="/images/return.png" alt=""></a>
+				<a class="return" href="/mainPage"><img class="returnImg" src="/images/return.png" alt=""></a>
 			</form>
 		</div>
 	</div>
 
 	<div class="show-all-recipes">
 		<ul class="images-container-recipes">
-        {{recipes }}{{user }}
 			{% for recipes in user.favorites %}
 
 				<div class="vignet">
 					<li>
-						<a href="/recipeDetail/{{recipes.id }}"><img src="/images/uploads/{{recipe.image}}" alt="recipes"></a>
+						<a href="/recipeDetail/{{recipes.id }}"><img src="/images/uploads/{{recipes.image}}" alt="recipes"></a>
 						<div class="items">
 							<h3>{{recipes.recipeTitle }}</h3>
 
@@ -27,14 +26,10 @@
 
 
 								<label class="ui-like">
-									{% if  recipes.id in user.favorites  %}
 
-										<input id="{{recipes.id}}" type="checkbox" checked>
 
-									{% else %}
+									<input id="{{recipes.id}}" type="checkbox" checked>
 
-										<input id="{{recipes.id}}" type="checkbox">
-									{% endif %}
 
 									<div class="like">
 										<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" fill="">

@@ -12,4 +12,4 @@ async function favorite(mouseevent) {
   } else {
     await fetch(baseUrl + "/removefavorite/" + input.id);
   }
-}
+} 

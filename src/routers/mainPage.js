@@ -4,11 +4,13 @@ const recipesModel = require("../models/recipesModels");
 const user = require('../models/subscribeModels')
 mainPageRouter.get("/MainPage", async (req, res) => {
   try {
-    const recipes = await recipesModel.find().limit(5);
+    const recipes = await recipesModel.find().limit(4);
+  
     res.render("MainPage/index.html.twig", {
       
       user: req.session.user,
       recipes : recipes,
+      todayRecipes : recipes.slice(2,5)
     });
   } catch (error) {
     console.log(error);

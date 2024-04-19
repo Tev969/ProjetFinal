@@ -47,7 +47,7 @@ favorisRouter.get("/removefavorite/:recipeid", authguard, async (req, res) => {
 favorisRouter.get("/favorites", authguard, async (req, res) => {
   try {
     const recipes = await recipesModel.find();
-    res.render("favorites/index.html.twig", {
+    res.status(200).render("favorites/index.html.twig", {
       user: await subscribeModel
         .findById(req.session.user._id)
         .populate("favorites"),
@@ -56,6 +56,8 @@ favorisRouter.get("/favorites", authguard, async (req, res) => {
     });
   } catch (error) {
     console.log(error);
+    res.status(500).send(error);
+    return res;
   }
 });
 
