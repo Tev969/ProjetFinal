@@ -147,9 +147,9 @@ h3 {
 }
 
 .button {
+  background-color: #FFD371;
   border: none;
   border-radius: 10px;
-  color: #333;
   cursor: pointer;
   display: flex;
   flex-direction: row;
@@ -177,7 +177,7 @@ h3 {
 }
 
 .card .Post {
-  color: #ffffff;
+  color: #000000;
 }
 
 .card .Post:hover {

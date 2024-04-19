@@ -1,0 +1,60 @@
+<section class="all-recipes-container">
+
+	<div class="top-container">
+		<h1>Nos recettes</h1>
+
+		<div class="search-recipe-container">
+			<form class"search-bar" action="/search" method="get">
+				<input type="search" id="searchRecipe" class="search-recipe" name="findRecipe" placeholder="Rechercher une recettes...">
+				<button class="find" type="submit">Rechercher</button>
+				<a class="return" href="/MainPage"><img class="returnImg" src="/images/return.png" alt=""></a>
+			</form>
+		</div>
+	</div>
+
+	<div class="show-all-recipes">
+		<ul class="images-container-recipes">
+        {{recipes }}{{user }}
+			{% for recipes in user.favorites %}
+
+				<div class="vignet">
+					<li>
+						<a href="/recipeDetail/{{recipes.id }}"><img src="/images/uploads/{{recipe.image}}" alt="recipes"></a>
+						<div class="items">
+							<h3>{{recipes.recipeTitle }}</h3>
+
+							<div class="fav">
+
+
+								<label class="ui-like">
+									{% if  recipes.id in user.favorites  %}
+
+										<input id="{{recipes.id}}" type="checkbox" checked>
+
+									{% else %}
+
+										<input id="{{recipes.id}}" type="checkbox">
+									{% endif %}
+
+									<div class="like">
+										<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" fill="">
+											<g stroke-width="0" id="SVGRepo_bgCarrier"></g>
+											<g stroke-linejoin="round" stroke-linecap="round" id="SVGRepo_tracerCarrier"></g>
+											<g id="SVGRepo_iconCarrier">
+												<path d="M20.808,11.079C19.829,16.132,12,20.5,12,20.5s-7.829-4.368-8.808-9.421C2.227,6.1,5.066,3.5,8,3.5a4.444,4.444,0,0,1,4,2,4.444,4.444,0,0,1,4-2C18.934,3.5,21.773,6.1,20.808,11.079Z"></path>
+											</g>
+										</svg>
+									</div>
+								</label>
+							</div>
+
+
+						</div>
+
+					</li>
+				</div>
+			{% endfor %}
+		</ul>
+	</div>
+
+</section>
