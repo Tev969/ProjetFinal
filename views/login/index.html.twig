@@ -1,7 +1,11 @@
 {% extends "../base.html.twig" %}
 {% block style %}
-<link rel="stylesheet" href="/css/login/login.css">
+	<link rel="stylesheet" href="/css/login/login.css">
 {% endblock %}
 {% block main %}
-{% include "login/login.html.twig" %}
+	{% include "login/login.html.twig" %}
 {% endblock %}
+{% block script %}
+	<script defer src="/script/connexion.js"></script>
+{% endblock %}
+

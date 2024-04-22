@@ -16,6 +16,7 @@
 				{% endif %}
 			</div>
 
+			<label class="password-label" for="password">
 			<div class="inputGroup">
 
 				<input id="password" name="password" placeholder="Mot de passe." type="password" required>
@@ -23,6 +24,16 @@
 					<p class="error">{{error.errors.password.message}}</p>
 				{% endif %}
 			</div>
+			<div class="password-icons">
+				<i data-feather="eye"></i>
+				<i data-feather="eye-off"></i>
+			</div>
+            </label>
+            
+			<script src="https://unpkg.com/feather-icons"></script>
+			<script>
+				feather.replace();
+			</script>
 
 			<div class="sendForm">
 				<div class="submitGroup">

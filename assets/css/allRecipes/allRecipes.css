@@ -106,7 +106,7 @@ body {
   padding: 15px;
   font-size: 16px;
   border: 1px solid #ccc;
-  border-radius: 8px 0px 0px 8px;
+  border-radius: 50px 0px 0px 50px;
   box-sizing: border-box;
   border: 1.5px solid #F15B3F;
   color: #F15B3F;
@@ -145,7 +145,7 @@ body {
   font-family: "Quicksand";
   border: 1.5px solid #F15B3F;
   border-left: none;
-  border-radius: 0px 8px 8px 0px;
+  border-radius: 0px 50px 50px 0px;
   padding: 10px 20px;
   transition: background-color 0.3s ease;
   cursor: pointer;
@@ -183,17 +183,17 @@ ul {
      object-fit: cover; /* Pour conserver les proportions de l'image */
   border-radius: 20px 20px 0px 0px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease;
+  transition: transform 0.4s ease;
 }
 .images-container-recipes li h3 {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   font-family: "Quicksand";
   color: black;
   text-wrap: nowrap;
 }
 
 img:hover {
-  transform: scale(1.05);
+  transform: scale(1.02);
 }
 
 .vignet {

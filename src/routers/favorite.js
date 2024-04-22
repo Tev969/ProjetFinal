@@ -51,7 +51,7 @@ favorisRouter.get("/favorites", authguard, async (req, res) => {
       user: await subscribeModel
         .findById(req.session.user._id)
         .populate("favorites"),
-      //   Le populate nous permet de "peupler" le champs favoris et e remplacer les id , par l'objet favoris
+      //   Le populate nous permet de "peupler" le champs favoris et de remplacer les id , par l'objet favoris
       recipes: recipes,
     });
   } catch (error) {
