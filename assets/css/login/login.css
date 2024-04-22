@@ -82,6 +82,7 @@ label .password-icons:hover {
 
 .inputGroup input:hover,
 .inputGroup input:focus {
+  font-family: "Quicksand";
   background-color: rgba(58, 57, 57, 0.5);
 }
 
@@ -107,11 +108,12 @@ input::placeholder {
   color: black;
   font-size: 1rem;
   transition: transform 0.4s ease;
+  font-family: "Quicksand";
 }
 
 button:hover {
   background-color: #FFD371;
-  transform: scale(1.1);
+  transform: scale(1.06);
 }
 
 .redirect a {
@@ -124,7 +126,7 @@ button:hover {
 
 .redirect a:hover {
   padding: 1.2rem 2.2rem;
-  transform: scale(1.05); /* Zoom de 5% */
+  transform: scale(1.03); /* Zoom de 5% */
   transition: transform 0.4s ease;
   color: #FFD371;
 }
@@ -134,6 +136,7 @@ button:hover {
   flex-direction: column;
   gap: 25px;
   padding-top: 45px;
+  font-family: "Quicksand";
 }
 .sendForm a {
   color: #FEF7E6;
@@ -159,5 +162,5 @@ button:hover {
 }
 
 .returnImg:hover {
-  transform: scale(1.2);
+  transform: scale(1.08);
 }/*# sourceMappingURL=login.css.map */

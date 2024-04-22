@@ -9,7 +9,7 @@
 
 			<div class="inputGroup">
 
-				<input id="name" name="name" placeholder="Nom ou prénom." type="text" required>
+				<input id="name" name="name" placeholder="Nom" type="text" required>
 				{% if error %}
 					<p class="error">{{error.errors.name.message}}</p>
 				{% endif %}
@@ -17,22 +17,33 @@
 
 			<div class="inputGroup">
 
-				<input id="email" name="email" placeholder="Votre mail." type="mail" required>
+				<input id="email" name="email" placeholder="Votre mail" type="mail" required>
 				{% if error %}
 					<p class="error">{{error.errors.email.message}}</p>
 				{% endif %}
 			</div>
 
+			<label class="password-label" for="password">
 			<div class="inputGroup">
 
-				<input id="password" name="password" placeholder="Mot de passe." type="password" required>
+				<input id="password" name="password" placeholder="Mot de passe" type="password" required>
 				{% if error %}
 					<p class="error">{{error.errors.password.message}}</p>
 				{% endif %}
 			</div>
+			<div class="password-icons">
+				<i data-feather="eye"></i>
+				<i data-feather="eye-off"></i>
+			</div>
+            </label>
+
+			<script src="https://unpkg.com/feather-icons"></script>
+			<script>
+				feather.replace();
+			</script>
 			<div class="sendForm">
 				<div class="submitGroup">
-					<button>Envoyer</button>
+					<button>S'inscrire</button>
 				</div>
 
 				<div class="redirect">

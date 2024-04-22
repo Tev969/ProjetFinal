@@ -1,7 +1,10 @@
 {% extends "../base.html.twig" %}
 {% block style %}
-<link rel="stylesheet" href="/css/subscribe/subscribe.css">
+	<link rel="stylesheet" href="/css/subscribe/subscribe.css">
 {% endblock %}
 {% block main %}
-{% include "subscribe/subscribe.html.twig" %}
+	{% include "subscribe/subscribe.html.twig" %}
+{% endblock %}
+{% block script %}
+	<script defer src="/script/connexion.js"></script>
 {% endblock %}

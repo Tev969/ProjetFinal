@@ -143,6 +143,31 @@ button:hover {
     height: 0px;
 }
 
+.password-label {
+    position: relative;
+}
+
+.password-icons {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 5%;
+    transform: translateY(50%);
+    width: 30px;
+    transition: all 0.2s;
+    right: 20px;
+
+}
+
+label .password-icons .feather-eye-off {
+    display: none;
+}
+
+label .password-icons:hover {
+    cursor: pointer;
+    color: $main-color;
+}
+
 
 .return {
     display: flex;
