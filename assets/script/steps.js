@@ -11,6 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
     textArea.classList.add("form-input", "stepsInput");
 
     const btn = document.createElement("button");
+    btn.classList.add("suppBtn") 
     add++;
     console.log(add);
     btn.innerText = "-";

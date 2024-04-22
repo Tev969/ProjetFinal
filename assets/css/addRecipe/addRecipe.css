@@ -9,6 +9,10 @@ body {
   padding-top: 60px;
 }
 
+textarea {
+  resize: none;
+}
+
 .add-recipe-container {
   margin-top: 5rem;
   margin-bottom: 3rem;
@@ -154,6 +158,14 @@ body {
   transition: background-color 0.3s ease;
 }
 
+.ingredient-group button {
+  border: none;
+  border-radius: 5px;
+  margin: 5px;
+  background-color: beige;
+  width: 20px;
+}
+
 .choose-photo-button:hover {
   background-color: #f4846f;
 }
@@ -177,7 +189,7 @@ body {
 }
 
 .add-ingredient-button:hover {
-  background-color: white;
+  background-color: #f4846f;
 }
 
 /* Style pour le champ d'entrée des étapes */
@@ -185,6 +197,14 @@ body {
   width: calc(100% - 150px); /* Largeur ajustée */
   display: inline-block;
   margin-bottom: 1rem;
+}
+
+#steps-list button {
+  border: none;
+  border-radius: 5px;
+  margin: 5px;
+  background-color: beige;
+  width: 20px;
 }
 
 .add-step-button {
