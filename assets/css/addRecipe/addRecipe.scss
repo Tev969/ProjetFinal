@@ -82,7 +82,7 @@ textarea
 }
 
 .add-recipe-button:hover {
-    background-color: darken($background-color, 10%); /* Assombrissement moins prononcé */
+    background-color: darken($second-color, 10%); /* Assombrissement moins prononcé */
 }
 
 .returnImg {
