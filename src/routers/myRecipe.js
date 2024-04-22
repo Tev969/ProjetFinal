@@ -8,7 +8,7 @@ const authguard = require("../../services/authguard");
 const multer = require("../../services/multer-config");
 const upload = require("../../services/multer-config");
 
-myRecipeRouter.get("/addRecipe", async (req, res) => {
+myRecipeRouter.get("/myRecipe", async (req, res) => {
   res.render("myRecipe/index.html.twig", {
     user: await subscribeModel
       .findById(req.session.user._id)
@@ -17,14 +17,14 @@ myRecipeRouter.get("/addRecipe", async (req, res) => {
 });
 // changer nom route
 
-myRecipeRouter.get("/addOneRecipe", async (req, res) => {
+myRecipeRouter.get("/add-recipe", async (req, res) => {
   res.render("addRecipe/index.html.twig", {
     user: await subscribeModel.findById(req.session.user._id),
   });
 });
 
 myRecipeRouter.post(
-  "/addOneRecipe",
+  "/add-recipe",
   authguard,
   multer.single("image"),
   async (req, res) => {
@@ -40,7 +40,7 @@ myRecipeRouter.post(
       recipe._user = req.session.user._id;
       recipe.validateSync();
       console.log(await recipe.save());
-      res.redirect("/addRecipe");
+      res.redirect("/myRecipe");
     } catch (error) {
       console.log(error);
       res.render("myRecipe/index.html.twig", {
@@ -56,7 +56,7 @@ myRecipeRouter.post(
 myRecipeRouter.get("/deleteRecipe/:recipeid", authguard, async (req, res) => {
   try {
     await recipesModel.deleteOne({ _id: req.params.recipeid });
-    res.redirect("/addRecipe");
+    res.redirect("/myRecipe");
   } catch (error) {
     console.log(error);
     res.render("addRecipe/index.html.twig", {
@@ -97,7 +97,7 @@ myRecipeRouter.post(
         req.body.image = req.file.filename;
       }
       await recipesModel.updateOne({ _id: req.params.recipeid }, req.body);
-      res.redirect("/addRecipe");
+      res.redirect("/myRecipe");
     } catch (error) {
       console.log(error);
       res.render("MainPage/index.html.twig", {
