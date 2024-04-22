@@ -59,7 +59,7 @@ body {
 }
 
 .form-input:focus {
-  border-color: #F15B3F; /* Changement de couleur au focus */
+  border-color: #FEF7E6; /* Changement de couleur au focus */
 }
 
 .add-recipe-button {
@@ -68,7 +68,7 @@ body {
   padding: 1rem;
   font-size: 1.2rem;
   border-radius: 8px;
-  border: none;
+  border: 1px solid #FEF7E6;
   background-color: #F15B3F;
   color: #FEF7E6;
   cursor: pointer;
@@ -76,7 +76,7 @@ body {
 }
 
 .add-recipe-button:hover {
-  background-color: #ec3411; /* Assombrissement moins prononcé */
+  background-color: #fce7b5; /* Assombrissement moins prononcé */
 }
 
 .returnImg {
@@ -110,7 +110,7 @@ body {
 .form-control input:focus,
 .form-control input:valid {
   outline: 0;
-  border-bottom-color: lightblue; /* Couleur de bordure au focus ou quand valide */
+  border-bottom-color: #FEF7E6; /* Couleur de bordure au focus ou quand valide */
 }
 
 .form-control label {
@@ -127,11 +127,12 @@ body {
   min-width: 5px;
   color: #fff;
   transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  font-family: "Quicksand";
 }
 
 .form-control input:focus + label span,
 .form-control input:valid + label span {
-  color: lightblue;
+  color: #FEF7E6;
   transform: translateY(-30px);
   top: 0;
 }
@@ -146,7 +147,7 @@ body {
   padding: 1rem 2rem;
   font-size: 1.2rem;
   border-radius: 8px;
-  border: none;
+  border: 1px solid #FEF7E6;
   background-color: #F15B3F;
   color: #FEF7E6;
   cursor: pointer;
@@ -168,7 +169,7 @@ body {
   padding: 0.7rem 1rem;
   font-size: 1rem;
   border-radius: 8px;
-  border: none;
+  border: 1px solid #FEF7E6;
   background-color: #F15B3F;
   color: #FEF7E6;
   cursor: pointer;
@@ -176,7 +177,7 @@ body {
 }
 
 .add-ingredient-button:hover {
-  background-color: #f4846f;
+  background-color: white;
 }
 
 /* Style pour le champ d'entrée des étapes */
@@ -190,7 +191,7 @@ body {
   padding: 0.7rem 1rem;
   font-size: 1rem;
   border-radius: 8px;
-  border: none;
+  border: 1px solid #FEF7E6;
   background-color: #F15B3F;
   color: #FEF7E6;
   cursor: pointer;

@@ -51,9 +51,9 @@
 					<a href="/recipeDetail/{{recipe.id }}"><img class="img-carrousel" src="/images/uploads/{{recipe.image}}" alt="recipes"></a>
 					<div class="fav">
 						<h3>{{recipe.recipeTitle }}</h3>
-                        
+
 						{% if user %}
-                        
+
 							<label class="ui-like">
 								{% if  recipe.id in user.favorites  %}
 
@@ -104,14 +104,28 @@
 			{% endfor %}
 		</ul>
 	</div>
-
 	<div class="favoris">
 		<h2 class="fav-recipe-title">Vos favoris</h2>
 		{% if user %}
 
 			<a href="/favorites">
-				<h3>Voir tout vos favoris.</h3>
+				<h3 class="favorisText">Retrouver ici vos favoris :)
+					<br>
+					<br>
+				</h3>
+				<a class="favBtn" href="/login">
+					<button class="cssbuttons-io-button">
+						Vos Favoris 
+						<div class="icon">
+							<svg height="24" width="24" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+								<path d="M0 0h24v24H0z" fill="none"></path>
+								<path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z" fill="currentColor"></path>
+							</svg>
+						</div>
+					</button>
+				</a>
 			</a>
+            
 
 
 		{% else %}
