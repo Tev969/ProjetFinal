@@ -35,6 +35,8 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+
+
 document.addEventListener("DOMContentLoaded", function () {
   const addIngredientButton = document.getElementById("add-ingredient-button");
   const ingredientsList = document.getElementById("ingredient-list");
@@ -55,6 +57,7 @@ document.addEventListener("DOMContentLoaded", function () {
     quantityInput.setAttribute("value", "1");
     quantityInput.name = `ingredients[${ingredientCount}][quantity]`;
 
+    
     const ingredientGroup = document.createElement("div");
     ingredientGroup.classList.add("ingredient-group");
     ingredientGroup.appendChild(ingredientTextarea);

@@ -45,7 +45,7 @@ const recipesSchema = new mongoose.Schema({
 
 
     ingredients: {
-      type: [{name:String , quantity:Number} , {}],
+      type: [{name:String , quantity:Number}],
   },
 });
 
