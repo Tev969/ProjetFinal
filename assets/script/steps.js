@@ -14,10 +14,11 @@ document.addEventListener("DOMContentLoaded", function () {
     btn.classList.add("suppBtn") 
     add++;
     console.log(add);
-    btn.innerText = "-";
+    btn.innerText = "X";
     btn.type = "button";
 
     const divContainer = document.createElement("div");
+    divContainer.classList.add("div-steps");
     divContainer.appendChild(textArea);
     divContainer.appendChild(btn);
     stepsList.appendChild(divContainer);
@@ -61,7 +62,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const removeBtn = document.createElement("button")
     removeBtn.type = "button"
-    removeBtn.innerText = "-"
+    removeBtn.innerText = "X"
 
     const removeIngredient = (event) => {
         const parentDiv = event.target.parentElement;
