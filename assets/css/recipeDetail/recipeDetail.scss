@@ -103,6 +103,7 @@ body {
 
 .steps {
     overflow-y: scroll;
+    scrollbar-color: $main-color;
     padding-top: 5px;
     max-width: 600px;
     margin-bottom: 15px;
