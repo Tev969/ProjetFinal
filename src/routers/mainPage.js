@@ -5,7 +5,7 @@ const userModel = require("../models/subscribeModels");
 mainPageRouter.get("/MainPage", async (req, res) => {
   try {
 
-    const recipes = await recipesModel.find().limit(4);
+    const recipes = await recipesModel.find().limit(5);
     let user;
     if (req.session.user) 
     {

@@ -747,7 +747,7 @@ button:hover .button-text {
     text-decoration: none;
 }
 
-@media only screen and (max-width: 1130px) {
+@media only screen and (max-width: 1330px) {
     .title-container {
         width: 180px;
         height: 105px;
@@ -776,40 +776,54 @@ button:hover .button-text {
 }
 
 /* Pour les écrans jusqu'à 480 pixels de largeur */
-@media only screen and (max-width: 480px) {
-    .title-container {
-        width: 150px;
-        height: 90px;
-        h1 {
-            font-size: 2.5em;
-        }
-        img {
-            width: 40px;
-            height: 40px;
-        }
-    }
 
-    .search-recipe-container {
-        max-width: 90%;
-    }
-}
-
-@media screen and (max-width: 1130px) {
-    .images-container-recipes li {
-        flex-basis: calc(30% - 1rem); /* Pour les écrans très petits, ajustez la largeur à 50% moins un espace */
-        max-width: calc(50% - 1rem);
-    }
-}
-
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 560) {
     .images-container-recipes {
-        flex-direction: column; /* Affichage des images en colonnes sur les écrans plus petits */
+        flex-wrap: wrap;
+        gap: 20px; /* Espacement entre les images */
+        .vignet{
+            width: fit-content;
+        } 
+        .recipes-container {
+            padding: 0;
+        }
+        .images-container-recipes {
+            justify-content: space-around;
+        }
+    }
+}
+
+@media screen and (max-width: 1230px) {
+    .images-container-recipes {
+        flex-wrap: wrap;
         gap: 20px; /* Espacement entre les images */
     }
+        .vignet{
+            width: fit-content;
+        } 
+        .recipes-container {
+            padding: 0;
+        }
+        .images-container-recipes {
+            justify-content: space-around;
+        }
+        .container-day {
+            width:100% ;
+        }
+    
 
     .images-container-recipes li {
-        flex-basis: 100%; /* Chaque élément occupe la pleine largeur de son conteneur */
+        flex-basis: 100%; 
         max-width: 100%; /* Ajuste également la largeur maximale */
+    }
+    .favoris {
+        width: 100%;
+        padding: 15px 55px 15px 55px;
+        margin-top: 25px;
+
+    }
+    .foot-page {
+        display: block;
     }
 }
 
